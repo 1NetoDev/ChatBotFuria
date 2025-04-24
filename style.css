@@ -1,0 +1,348 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: #686868;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; /* Organiza os itens do header verticalmente */
+    align-items: center; /* Centraliza horizontalmente os itens */
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre os ícones/busca e o logo */
+}
+
+.header-icons a {
+    color: #000000;
+    margin-right: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.header-icons img {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.header-search {
+    display: flex;
+}
+
+.header-search input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 5px;
+    margin-left: auto; /* Empurra a barra de pesquisa para a direita */
+}
+
+.header-search button {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.header-logo img {
+    width: 230px;
+    height: 230px;
+    max-height: 100px; /* Aumentei um pouco a altura do logo */
+    margin-bottom: 35px; /* Espaçamento entre o logo e a navegação */
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Centraliza os itens da navegação */
+    width: 100%; /* Garante que a navegação ocupe a largura total */
+}
+
+.header-nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header-nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Resto do CSS (Seção de Jogos, Chatbot, Notícias, etc.) */
+#jogos {
+    width: 65%;
+    padding-right: 20px;
+    border-right: 1px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.game-card {
+    border: 1px solid #153970;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-card h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.game-card a {
+    display: block;
+    padding: 8px 10px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+.chatbot-widget {
+    width: 30%;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+#noticias {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff;
+}
+
+.latest-news {
+    display: flex;
+    gap: 20px;
+}
+
+.main-news {
+    width: 60%;
+}
+
+.main-news img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.main-news h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.main-news a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.other-news {
+    width: 40%;
+}
+
+.news-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.news-item h3 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.news-item p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 0;
+}
+
+#quem-somos, #loja, #contato {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.main-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: stretch; /* Alinha os itens à largura total */
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .header-icons {
+        margin-bottom: 10px;
+    }
+
+    .header-search {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header-search input[type="text"] {
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .header-search button {
+        border-radius: 5px;
+    }
+
+    .header-nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+/* Seção de Jogos */
+#jogos {
+    width: 60%;
+    padding-right: 20px;
+    border-right: 1px solid #ffffff;
+    margin-bottom: 20px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Uma coluna para empilhar os retângulos */
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.game-card {
+    border: 1px solid #153970;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex; /* Para alinhar imagem e conteúdo */
+    flex-direction: column; /* Conteúdo abaixo da imagem */
+}
+
+.game-card img {
+    width: 100%;
+    height: auto; /* Manter a proporção da imagem */
+    display: block;
+    aspect-ratio: 16 / 9; /* Proporção de retângulo (pode ajustar) */
+    object-fit: cover; /* Preencher o retângulo sem distorcer muito */
+}
+
+.game-card h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.game-card a {
+    display: block;
+    padding: 8px 10px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Widget do Chatbot */
+.chatbot-widget {
+    width: 55%; /* Ajustei a largura do chatbot para ocupar o restante */
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    #jogos {
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .chatbot-widget {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+}
