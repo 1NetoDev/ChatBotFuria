@@ -66,47 +66,7 @@
     font-size: 0.9em;
 }
 
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-    #CS-Go {
-        width: 90%;
-        padding: 15px;
-        order: 0;
-    }
-
-    .team-section-title {
-        font-size: 1.2em;
-        margin-top: 25px;
-        margin-bottom: 10px;
-    }
-
-    .Line-section,
-    .coach-section,
-    .reserves-section {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 15px;
-        margin-top: 10px;
-    }
-
-    .player-card {
-        padding: 10px;
-    }
-
-    .player-card img {
-        max-width: 80px;
-        margin-bottom: 8px;
-    }
-
-    .player-name {
-        font-size: 1em;
-    }
-
-    .player-role {
-        font-size: 0.8em;
-    }
-}
-
-/* Seção de notícias elegante */
+/* Seção de notícias no estilo do Corinthians */
 #noticias {
     width: 90%;
     margin-bottom: 30px;
@@ -114,68 +74,62 @@
     padding: 20px;
     border-radius: 12px;
     order: -2; /* Colocar abaixo do time */
+    text-align: center; /* Centralizar o título da seção */
 }
 
-.latest-news {
+.news-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.main-news {
-    background-color: #222;
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.main-news img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.main-news-content {
-    flex: 1;
-}
-
-.main-news-content h3 {
-    color: #f39c12;
-    margin-top: 0;
-}
-
-.main-news-content a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #fff;
-    text-decoration: underline;
-}
-
-/* Notícias menores */
-.other-news {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas com largura mínima de 300px */
+    gap: 20px; /* Espaçamento entre os itens da grade */
+    margin-top: 20px; /* Espaçamento entre o título e a grade */
 }
 
 .news-item {
-    background-color: #1c1c1c;
-    padding: 10px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left; /* Alinhar o texto dentro de cada item à esquerda */
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 10px;
+    display: block; /* Evitar espaçamento extra abaixo da imagem */
 }
 
 .news-item h3 {
     color: #f39c12;
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
-.news-item p {
+.news-item .news-info {
     color: #aaa;
-    margin-bottom: 0;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.news-item a {
+    display: inline-block;
+    background-color: #333;
+    color: #eee;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.news-item a:hover {
+    background-color: #f39c12;
+    color: #111;
+}
+
+/* Removendo os estilos antigos da seção de notícias */
+.latest-news, .main-news, .other-news, .news-item h3 {
+    /* Estes estilos não serão mais utilizados com a nova estrutura */
 }
 
 /* Seção "Sobre nós" (Quem Somos) */
@@ -221,7 +175,7 @@ h2 {
         padding: 10px;
     }
 
-    #jogos {
+    #CS-Go {
         width: 90%;
         padding: 15px;
         order: 0;
@@ -247,10 +201,16 @@ h2 {
         width: 90%;
         padding: 15px;
         order: 0;
+        text-align: center; /* Centralizar o título em telas menores também */
     }
 
-    .latest-news {
-        grid-template-columns: 1fr;
+    .news-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        gap: 15px;
+    }
+
+    .news-item {
+        text-align: left; /* Manter o alinhamento à esquerda nos itens em telas menores */
     }
 
     .main-news {
