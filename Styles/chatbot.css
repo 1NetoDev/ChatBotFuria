@@ -94,18 +94,22 @@
 
 /* Widget do Chatbot (Manter os estilos existentes e ajustar se necessário) */
 .chatbot-widget {
-    height: 600px;
+    width: 100px;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden;
     position: fixed; /* Mantendo o posicionamento fixo para o widget flutuante */
     bottom: 20px;
     right: 20px;
     z-index: 1000; /* Garante que fique acima de outros elementos */
+    display: flex; /* Mantenha o flex para centralizar o iframe */
+    flex-direction: column;
+    justify-content: center;
 }
 
 .chatbot-widget #chatling-inline-bot {
     width: 100% !important;
-    height: 600px !important;
+    height: 300px !important;
 }
 
 /* Estilos Responsivos para o Chatbot */
@@ -143,5 +147,14 @@
         height: 60px;
         bottom: 15px;
         right: 15px;
+        display: flex; /* Mantenha o flex para centralizar o ícone */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chatbot-widget #chatling-inline-bot {
+        /* Estilos para o bot inline quando aberto em telas menores (se aplicável) */
+        width: 100% !important;
+        height: auto !important; /* Ajuste a altura para o conteúdo */
     }
 }
