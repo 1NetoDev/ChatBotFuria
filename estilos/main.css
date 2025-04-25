@@ -1,0 +1,218 @@
+/* Estilos globais para o projeto */
+.container {
+    width: 100%; /* Cobrir toda a largura */
+    margin: 0; /* Remover margens laterais */
+    padding: 20px;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizar o conteúdo horizontalmente */
+    box-sizing: border-box; /* Incluir padding na largura total */
+}
+
+/* Seção de Jogos (Abaixo do Chatbot) */
+#jogos {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    color: #eee;
+    order: -3; /* Colocar abaixo do chatbot */
+}
+
+.team-and-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lineup-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.lineup-section img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lineup-info h3 {
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.lineup-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lineup-info ul li {
+    margin-bottom: 5px;
+}
+
+/* Seção de notícias elegante */
+#noticias {
+    width: 90%;
+    margin-bottom: 30px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    order: -2; /* Colocar abaixo do time */
+}
+
+.latest-news {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.main-news {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main-news img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-news-content {
+    flex: 1;
+}
+
+.main-news-content h3 {
+    color: #f39c12;
+    margin-top: 0;
+}
+
+.main-news-content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Notícias menores */
+.other-news {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.news-item {
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.news-item h3 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.news-item p {
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+/* Seção "Sobre nós" (Quem Somos) */
+#quem-somos {
+    width: 90%;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #eee;
+    order: -1; /* Colocar abaixo das notícias */
+}
+
+#quem-somos h2 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#quem-somos p {
+    margin-bottom: 0;
+}
+
+#loja,
+#contato {
+    width: 90%;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+h2 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Estilos Responsivos para o Main */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #jogos {
+        width: 90%;
+        padding: 15px;
+        order: 0;
+    }
+
+    .team-and-info {
+        align-items: stretch;
+    }
+
+    .lineup-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .lineup-section img {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    #noticias {
+        width: 90%;
+        padding: 15px;
+        order: 0;
+    }
+
+    .latest-news {
+        grid-template-columns: 1fr;
+    }
+
+    .main-news {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-news img {
+        max-width: 100%;
+    }
+
+    #quem-somos {
+        width: 90%;
+        padding: 15px;
+        order: 0;
+    }
+}

@@ -1,0 +1,132 @@
+
+/* Header */
+.main-header {
+    display: flex;
+    flex-direction: column; /* Empilhar as linhas */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    align-items: center; /* Centralizar a segunda linha (nav) */
+}
+
+/* Primeira Linha (Busca, Logo, Ícones) */
+.header-top-row {
+    background-color: #f8f8f8; /* Cor de fundo para a linha (opcional) */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinhar verticalmente */
+    width: 90%; /* Largura da linha */
+    box-sizing: border-box;
+}
+
+/* Busca */
+.header-search {
+    display: flex;
+}
+
+.header-search input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    color: #333;
+}
+
+.header-search button {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Container da Logo */
+.header-logo-container {
+    /* Não precisa de estilos específicos de posicionamento aqui */
+}
+
+/* Logo */
+.header-logo {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+/* Ícones de Redes Sociais */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    margin-left: 10px; /* Espaçamento entre os ícones */
+}
+
+.header-icons img {
+    width: 24px; /* Tamanho dos ícones (ajuste conforme necessário) */
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Barra de Navegação Principal Branca */
+.header-main-nav {
+    background-color: #fff; /* Cor branca */
+    color: #333;
+    padding: 15px 20px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-top: 10px; /* Espaço entre a primeira e a segunda linha */
+}
+
+.header-main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centralizar os links */
+}
+
+.header-main-nav ul li {
+    margin: 0 20px; /* Espaçamento entre os links */
+}
+
+.header-main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-main-nav ul li a:hover {
+    color: #f39c12; /* Cor ao passar o mouse (opcional) */
+}
+
+/* Estilos Responsivos para o Header */
+@media (max-width: 768px) {
+    .header-top-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-search {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .header-logo-container {
+        margin-bottom: 10px;
+    }
+
+    .header-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header-main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-main-nav ul li {
+        margin: 10px 0;
+    }
+}

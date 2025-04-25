@@ -1,0 +1,19 @@
+/* Reset básico para consistência entre navegadores */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+ul {
+    list-style: none;
+}
+
+/* Estilos básicos para o body */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
