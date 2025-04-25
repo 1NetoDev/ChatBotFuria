@@ -19,102 +19,196 @@ body {
 
 /* Header */
 .main-header {
-    background-color: #858585;
-    color: #ffffff;
-    padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Empilhar as linhas */
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
+    align-items: center; /* Centralizar a segunda linha (nav) */
 }
 
-.header-top {
-    width: 90%;
+/* Primeira Linha (Busca, Logo, Ícones) */
+.header-top-row {
+    background-color: #f8f8f8; /* Cor de fundo para a linha (opcional) */
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinhar verticalmente */
+    width: 90%; /* Largura da linha */
+    box-sizing: border-box;
 }
 
-.header-icons a {
-    margin-right: 15px;
-    font-size: 1.5em;
-    text-decoration: none;
-    color: #000;
-}
-
-.header-icons img {
-    width: 35px;
-    height: 35px;
-    vertical-align: middle;
-}
-
+/* Busca */
 .header-search {
     display: flex;
 }
 
 .header-search input[type="text"] {
     padding: 8px;
-    border: none;
-    border-radius: 10px 0 0 5px;
-    margin-left: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    color: #333;
 }
 
 .header-search button {
     background-color: #000000;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 0 5px 5px 0;
+    color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 9px 10px;
+    border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
 
-.header-logo img {
-    width: 250px;
+/* Container da Logo */
+.header-logo-container {
+    /* Não precisa de estilos específicos de posicionamento aqui */
+}
+
+/* Logo */
+.header-logo {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
-    margin: 10px 0;
 }
 
-.header-nav {
+/* Ícones de Redes Sociais */
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    margin-left: 10px; /* Espaçamento entre os ícones */
+}
+
+.header-icons img {
+    width: 24px; /* Tamanho dos ícones (ajuste conforme necessário) */
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Barra de Navegação Principal Branca */
+.header-main-nav {
+    background-color: #fff; /* Cor branca */
+    color: #333;
+    padding: 15px 20px;
     width: 90%;
-    background-color: #333;
-    padding: 10px 0;
-    border-radius: 8px;
-    margin-top: 10px;
+    box-sizing: border-box;
+    margin-top: 10px; /* Espaço entre a primeira e a segunda linha */
 }
 
-.header-nav ul {
+.header-main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center; /* Centralizar os links */
 }
 
-.header-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.header-main-nav ul li {
+    margin: 0 20px; /* Espaçamento entre os links */
 }
 
-.header-nav ul li a {
-    color: #fff;
+.header-main-nav ul li a {
     text-decoration: none;
+    color: #333;
     font-weight: bold;
 }
 
-/* Área do Chatbot (Topo) */
-.chatbot-area {
+.header-main-nav ul li a:hover {
+    color: #f39c12; /* Cor ao passar o mouse (opcional) */
+}
+
+/* Estilos Responsivos (Pode precisar de ajustes) */
+@media (max-width: 768px) {
+    .header-top-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-search {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .header-logo-container {
+        margin-bottom: 10px;
+    }
+
+    .header-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header-main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-main-nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Container da Logo */
+.header-logo-container {
+    padding: 10px 0; /* Adiciona um pouco de espaço acima e abaixo da logo */
+    width: 90%; /* Ocupar a mesma largura da nav */
+    display: flex;
+    justify-content: center; /* Centralizar a logo */
+}
+
+/* Logo */
+.header-logo {
+    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+/* Barra de Navegação Principal Branca */
+.header-main-nav {
+    background-color: #fff; /* Cor branca */
+    color: #333;
+    padding: 15px 20px;
     width: 90%;
+    box-sizing: border-box;
+}
+
+.header-main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinhar os links horizontalmente */
+    justify-content: center; /* Centralizar os links */
+}
+
+.header-main-nav ul li {
+    margin: 0 20px; /* Espaçamento entre os links */
+}
+
+.header-main-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header-main-nav ul li a:hover {
+    color: #f39c12; /* Cor ao passar o mouse (opcional) */
+}
+
+/* Área de Apresentação do Chatbot */
+.chatbot-presentation-area {
+    width: 100%;
     background-color: #333;
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
     color: #eee;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    order: -1; /* Inverter a ordem visual, colocando-o no topo */
+    display: flex; /* Alinhar a apresentação e o widget lado a lado */
+    gap: 20px; /* Espaçamento entre a apresentação e o widget */
+    order: -4; /* Colocar no topo do main */
+}
+
+.chatbot-respect {
+    flex: 1; /* A apresentação ocupa a maior parte do espaço */
 }
 
 .chatbot-respect h2 {
@@ -124,12 +218,26 @@ body {
 
 .chatbot-respect ul {
     list-style: disc;
-    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Widget do Chatbot */
+.chatbot-widget {
+    width: 800px; /* Largura desejada */
+    height: 600px; /* Altura desejada */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o conteúdo do iframe caiba dentro */
 }
 
 .chatbot-widget h2 {
     color: #f39c12;
     margin-top: 0;
+    text-align: center; /* Centralizar o título do widget */
+}
+
+.chatbot-widget #chatling-inline-bot {
+    width: 100% !important;
+    height: 100% !important; /* Forçar a altura do iframe */
 }
 
 /* Seção de Jogos (Abaixo do Chatbot) */
@@ -140,7 +248,7 @@ body {
     background-color: #222;
     border-radius: 8px;
     color: #eee;
-    order: -2; /* Colocar abaixo do chatbot */
+    order: -3; /* Colocar abaixo do chatbot */
 }
 
 .team-and-info {
@@ -183,12 +291,12 @@ body {
     background-color: #111;
     padding: 20px;
     border-radius: 12px;
-    order: -3; /* Colocar abaixo do time */
+    order: -2; /* Colocar abaixo do time */
 }
 
 .latest-news {
     display: grid;
-    grid-template-columns: 1fr; /* Alterado para uma coluna para melhor visualização em tela cheia */
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -196,19 +304,19 @@ body {
     background-color: #222;
     padding: 15px;
     border-radius: 10px;
-    display: flex; /* Para alinhar imagem e texto */
+    display: flex;
     gap: 15px;
-    align-items: center; /* Alinhar verticalmente */
+    align-items: center;
 }
 
 .main-news img {
-    max-width: 200px; /* Diminuir a largura da imagem */
+    max-width: 200px;
     height: auto;
     border-radius: 10px;
 }
 
 .main-news-content {
-    flex: 1; /* O texto ocupa o restante do espaço */
+    flex: 1;
 }
 
 .main-news-content h3 {
@@ -228,7 +336,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px; /* Adicionar espaço acima das outras notícias */
+    margin-top: 20px;
 }
 
 .news-item {
@@ -248,7 +356,27 @@ body {
     margin-bottom: 0;
 }
 
-#quem-somos,
+/* Seção "Sobre nós" (Quem Somos) */
+#quem-somos {
+    width: 90%;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #eee;
+    order: -1; /* Colocar abaixo das notícias */
+}
+
+#quem-somos h2 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#quem-somos p {
+    margin-bottom: 0;
+}
+
 #loja,
 #contato {
     width: 90%;
@@ -317,50 +445,12 @@ h2 {
         margin: 10px 0;
     }
 
-    .chatbot-area {
-        width: 90%;
-        margin-top: 20px;
-        order: 0; /* Reset para a ordem normal em telas pequenas */
-    }
-
-    #jogos {
-        width: 90%;
-        padding: 15px;
-        order: 0; /* Reset para a ordem normal em telas pequenas */
-    }
-
-    .team-and-info {
-        align-items: stretch;
-    }
-
-    .lineup-section {
-        flex-direction: column;
+    .chatbot-presentation-area {
+        flex-direction: column; /* Empilhar em telas menores */
         align-items: center;
-        text-align: center;
-        margin-bottom: 15px;
     }
 
-    .lineup-section img {
-        width: 100%;
-        max-width: 200px;
-    }
-
-    #noticias {
-        width: 90%;
-        padding: 15px;
-        order: 0; /* Reset para a ordem normal em telas pequenas */
-    }
-
-    .latest-news {
-        grid-template-columns: 1fr;
-    }
-
-    .main-news {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .main-news img {
-        max-width: 100%;
-    }
-}
+    .chatbot-widget {
+        width: 80%; /* Largura maior em telas pequenas */
+        height: auto; /* Altura automática */
+        margin-top: 2

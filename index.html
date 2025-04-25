@@ -2,17 +2,42 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Meu Site de Jogos</title>
+    <title>ChatBot Furia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
-        </header>
+        <div class="header-top-row">
+            <div class="header-search">
+                <input type="text" placeholder="Buscar...">
+                <button>Buscar</button>
+            </div>
+            <div class="header-logo-container">
+                <img src="/imagens/icones/logo-furia.svg" alt="Logo do Site" class="header-logo">
+            </div>
+            <div class="header-icons">
+                <a href="#"><img src="/imagens/icones/Pretos/linkedin.svg" alt="linkedin"></a>
+                <a href="#"><img src="/imagens/icones/Pretos/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="/imagens/icones/Pretos/x.svg" alt="x"></a>
+                <a href="#"><img src="/imagens/icones/Pretos/tiktok.svg" alt="tiktok"></a>
+                <a href="#"><img src="/imagens/icones/Pretos/twitch.svg" alt="twitch"></a>
+            </div>
+        </div>
+        <nav class="header-main-nav">
+            <ul>
+                <li><a href="#quem-somos">Sobre nós</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+                <li><a href="#loja">Loja</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container">
-        <aside class="chatbot-area">
+        <div class="chatbot-presentation-area">
             <div class="chatbot-respect">
-                <h2>Nosso Chatbot Respeita:</h2>
+                <h2>Apresentação Chatbot</h2>
                 <p>Interações educadas e construtivas são sempre bem-vindas. Nosso chatbot foi desenvolvido para ajudar e informar, mantendo um ambiente respeitoso para todos os usuários.</p>
                 <h3>Funcionalidades:</h3>
                 <ul>
@@ -22,13 +47,12 @@
                     <li>Auxiliar na navegação pelo site.</li>
                 </ul>
             </div>
-            <div class="chatbot-widget">
+            <aside class="chatbot-widget">
                 <h2>Chatbot</h2>
-                <script> window.chtlConfig = { chatbotId: "7711879377", display: "page_inline" } </script>
-                <div id="chatling-inline-bot" style="width: 100%; height: 300px;"></div>
-                <script async data-id="7711879377" data-display="page_inline" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-            </div>
-        </aside>
+                <script> window.chtlConfig = { chatbotId: "7711879377" } </script>
+<script async data-id="7711879377" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+            </aside>
+        </div>
 
         <section id="jogos" class="games-section">
             <h2>Time CS-GO</h2>
@@ -71,7 +95,7 @@
         </section>
 
         <section id="quem-somos">
-            <h2>Quem Somos</h2>
+            <h2>Sobre nós</h2>
             <p>Informações sobre a equipe ou empresa.</p>
         </section>
 
