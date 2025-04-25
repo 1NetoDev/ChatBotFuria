@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ChatBot Furia</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Styles/style.css">
 </head>
 <body>
     <header class="main-header">
@@ -36,41 +36,94 @@
 
     <main class="container">
         <div class="chatbot-presentation-area">
-            <div class="chatbot-respect">
-                <h2>Apresentação Chatbot</h2>
-                <p>Interações educadas e construtivas são sempre bem-vindas. Nosso chatbot foi desenvolvido para ajudar e informar, mantendo um ambiente respeitoso para todos os usuários.</p>
-                <h3>Funcionalidades:</h3>
-                <ul>
-                    <li>Tirar dúvidas sobre o time de CS:GO.</li>
-                    <li>Informar sobre últimas notícias e resultados.</li>
-                    <li>Apresentar informações sobre a organização.</li>
-                    <li>Auxiliar na navegação pelo site.</li>
-                </ul>
+            <div class="chatbot-intro">
+                <h2 class="chatbot-title">Olá! Sou o <span class="juba-name">Juba</span>, seu assistente virtual Furia!</h2>
+                <p class="chatbot-greeting">Estou aqui para te ajudar com informações sobre o time, notícias, a organização e muito mais. Vamos nessa?</p>
+                <img src="caminho/para/seu-banner-animado.gif" alt="Banner Animado do Juba" class="juba-banner">
+            </div>
+            <div class="chatbot-features">
+                <h3 class="features-title">Comandos e Funcionalidades:</h3>
+                <ul class="features-list">
+                    <li class="feature-item">
+                        <span class="feature-icon">💡</span>
+                        <span class="feature-text">Tire suas <strong>dúvidas</strong> sobre o time de CS:GO.</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">📰</span>
+                        <span class="feature-text">Fique por dentro das <strong>últimas notícias</strong> e resultados.</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">🏢</span>
+                        <span class="feature-text">Descubra informações sobre a <strong>organização Furia</strong>.</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">🧭</span>
+                        <span class="feature-text">Precisa de ajuda para <strong>navegar no site</strong>? Pergunte!</span>
+                    </li>
+                    <li class="feature-item">
+                        <span class="feature-icon">💬</span>
+                        <span class="feature-text">Diga um <strong>"oi"</strong> para começarmos!</span>
+                    </li>
+                    </ul>
             </div>
             <aside class="chatbot-widget">
-                <h2>Chatbot</h2>
                 <script> window.chtlConfig = { chatbotId: "7711879377" } </script>
-<script async data-id="7711879377" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+                <script async data-id="7711879377" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
             </aside>
         </div>
 
-        <section id="jogos" class="games-section">
-            <h2>Time CS-GO</h2>
-            <div class="team-and-info">
-                <div class="lineup-section">
-                    <img src="/imagens/icones/Jogos/cs.jpg" alt="Time CS-GO">
-                    <div class="lineup-info">
-                        <h3>Line Principal:</h3>
-                        <ul>
-                            <li>Jogador 1 (IGL)</li>
-                            <li>Jogador 2 (Entry)</li>
-                            <li>Jogador 3 (Rifler)</li>
-                            <li>Jogador 4 (AWP)</li>
-                            <li>Jogador 5 (Support)</li>
-                        </ul>
-                    </div>
+        <section id="CS-Go" class="games-section">
+            <h2>Line Atual:</h2>
+            <div class="Line-section">
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/molodoy.png" alt="Molodoy">
+                    <h3 class="player-name">Molodoy</h3>
+                    <p class="player-role">Danil Golubenko</p>
+                </div>
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/yekindar.png" alt="Yekindar 2">
+                    <h3 class="player-name">Yekindar</h3>
+                    <p class="player-role">Mareks Gaļinskis</p>
+                </div>
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/fallen.jpg" alt="Fallen">
+                    <h3 class="player-name">Fallen</h3>
+                    <p class="player-role">Gabriel Toledo</p>
+                </div>
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/kscerato.jpg" alt="Kscerato">
+                    <h3 class="player-name">Kscerato</h3>
+                    <p class="player-role">Kaike Cerato</p>
+                </div>
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/yuurih.jpg" alt="Yuurih 5">
+                    <h3 class="player-name">Yuurih</h3>
+                    <p class="player-role">Yuri Boian</p>
                 </div>
             </div>
+        
+            <h2 class="team-section-title">Reservas:</h2>
+            <div class="reserves-section">
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/skullz.jpg" alt="Skullz">
+                    <h3 class="player-name">Skullz</h3>
+                    <p class="player-role">Felipe Medeiros</p>
+                </div>
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/chelo.png" alt="Chelo">
+                    <h3 class="player-name">Chelo</h3>
+                    <p class="player-role">Marcelo Cespedes</p>
+                </div>
+                </div>
+
+            <h2 class="team-section-title">Coach:</h2>
+            <div class="coach-section">
+                <div class="player-card">
+                    <img src="/imagens/icones/jogadores/sidde.png" alt="Sidde">
+                    <h3 class="player-name">Sidde</h3>
+                    <p class="player-role">Sidnei Macedo</p>
+                </div>
+                </div>
         </section>
 
         <section id="noticias">

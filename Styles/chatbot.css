@@ -1,0 +1,147 @@
+/* Styles/chatbot.css */
+
+/* Importando a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.chatbot-presentation-area {
+    width: 100%;
+    background-color: #1a1a1a; /* Fundo mais escuro para contraste */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 30px; /* Aumentando o padding interno */
+    color: #eee;
+    display: flex;
+    gap: 30px; /* Aumentando o espaçamento entre a apresentação e o widget */
+    order: -4;
+    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte Montserrat */
+}
+
+.chatbot-intro {
+    flex: 1; /* Ocupa mais espaço para a introdução */
+    margin-bottom: 20px;
+}
+
+.juba-banner {
+    display: block; /* Para ocupar a largura definida e permitir margens */
+    width: 70%; /* Sugestão de largura (ajuste conforme necessário) */
+    height: auto; /* Para manter a proporção do GIF */
+    margin-top: 15px; /* Espaço acima do banner */
+    margin-left: auto; /* Centralizar horizontalmente */
+    margin-right: auto; /* Centralizar horizontalmente */
+    border-radius: 5px; /* Opcional: Arredondar as bordas do banner */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Opcional: Adicionar uma sombra suave */
+}
+
+.chatbot-title {
+    color: #f39c12; /* Cor primária chamativa */
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.juba-name {
+    font-style: italic;
+    color: #fff;
+}
+
+.chatbot-greeting {
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.chatbot-features {
+    flex: 1; /* Ocupa espaço para as funcionalidades */
+}
+
+.features-title {
+    color: #f39c12;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #333; /* Linha de destaque */
+    padding-bottom: 10px;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #222; /* Fundo sutil para cada item */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.feature-icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #f39c12; /* Ícone chamativo */
+}
+
+.feature-text {
+    line-height: 1.4;
+}
+
+.feature-text strong {
+    font-weight: 600;
+    color: #fff; /* Destacando palavras-chave */
+}
+
+/* Widget do Chatbot (Manter os estilos existentes e ajustar se necessário) */
+.chatbot-widget {
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: fixed; /* Mantendo o posicionamento fixo para o widget flutuante */
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.chatbot-widget #chatling-inline-bot {
+    width: 100% !important;
+    height: 600px !important;
+}
+
+/* Estilos Responsivos para o Chatbot */
+@media (max-width: 768px) {
+    .chatbot-presentation-area {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .chatbot-intro {
+        margin-bottom: 15px;
+    }
+
+    .chatbot-title {
+        font-size: 1.8em;
+    }
+
+    .features-title {
+        font-size: 1.3em;
+    }
+
+    .feature-item {
+        padding: 10px;
+    }
+
+    .feature-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+    }
+
+    .chatbot-widget {
+        width: 60px;
+        height: 60px;
+        bottom: 15px;
+        right: 15px;
+    }
+}

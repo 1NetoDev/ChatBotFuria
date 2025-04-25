@@ -1,3 +1,4 @@
+/* Styles/header.css */
 
 /* Header */
 .main-header {
@@ -7,11 +8,12 @@
     box-sizing: border-box;
     margin-bottom: 20px;
     align-items: center; /* Centralizar a segunda linha (nav) */
+    background-color: #fff; /* Novo: Cor de fundo branca para o header */
 }
 
 /* Primeira Linha (Busca, Logo, Ícones) */
 .header-top-row {
-    background-color: #f8f8f8; /* Cor de fundo para a linha (opcional) */
+    background-color: #fff; /* Novo: Cor de fundo branca para a linha */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between; /* Espaço entre os elementos */
@@ -23,6 +25,9 @@
 /* Busca */
 .header-search {
     display: flex;
+    background-color: #fff; /* Opcional: Fundo branco para a busca */
+    border-radius: 5px; /* Opcional: Adiciona um arredondamento */
+    padding: 2px; /* Opcional: Ajusta o padding interno */
 }
 
 .header-search input[type="text"] {
@@ -30,6 +35,7 @@
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     color: #333;
+    border-right: none; /* Opcional: Remove a borda direita para juntar com o botão */
 }
 
 .header-search button {
@@ -39,11 +45,14 @@
     padding: 8px 10px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    border-left: none; /* Opcional: Remove a borda esquerda para juntar com o input */
 }
 
 /* Container da Logo */
 .header-logo-container {
     /* Não precisa de estilos específicos de posicionamento aqui */
+    background-color: #fff; /* Novo: Cor de fundo branca para o container da logo */
+    padding: 5px 0; /* Opcional: Adiciona um pouco de padding vertical */
 }
 
 /* Logo */
@@ -56,21 +65,25 @@
 .header-icons {
     display: flex;
     align-items: center;
+    background-color: #fff; /* Novo: Cor de fundo branca para os ícones */
+    padding: 5px 0; /* Opcional: Adiciona um pouco de padding vertical */
 }
 
 .header-icons a {
     margin-left: 10px; /* Espaçamento entre os ícones */
+    /* background-color: transparent; Removendo qualquer background-color explícito */
 }
 
 .header-icons img {
     width: 24px; /* Tamanho dos ícones (ajuste conforme necessário) */
     height: 24px;
     vertical-align: middle;
+    /* background-color: transparent; Removendo qualquer background-color explícito */
 }
 
 /* Barra de Navegação Principal Branca */
 .header-main-nav {
-    background-color: #fff; /* Cor branca */
+    background-color: #fff; /* Já estava branco */
     color: #333;
     padding: 15px 20px;
     width: 90%;
@@ -92,7 +105,7 @@
 
 .header-main-nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
 }
 

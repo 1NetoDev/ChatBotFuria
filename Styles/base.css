@@ -1,4 +1,6 @@
 /* Reset básico para consistência entre navegadores */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
     margin: 0;
     padding: 0;
@@ -11,9 +13,9 @@ ul {
     list-style: none;
 }
 
-/* Estilos básicos para o body */
+/* Estilos básicos para o body */   
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
+    font-family: "Roboto Mono", monospace;
+    background-color: #1a1a1a;
     color: #333;
 }
