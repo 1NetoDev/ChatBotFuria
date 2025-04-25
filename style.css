@@ -7,13 +7,14 @@ body {
 }
 
 .container {
-    width: 90%; /* Ajustei a largura do container */
-    margin: 20px auto; /* Centralizar o container */
+    width: 100%; /* Cobrir toda a largura */
+    margin: 0; /* Remover margens laterais */
     padding: 20px;
     background-color: #1a1a1a;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centralizar o conteúdo horizontalmente */
+    box-sizing: border-box; /* Incluir padding na largura total */
 }
 
 /* Header */
@@ -26,7 +27,7 @@ body {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 20px; /* Adicionei margem abaixo do header */
+    margin-bottom: 20px;
 }
 
 .header-top {
@@ -102,7 +103,36 @@ body {
     font-weight: bold;
 }
 
-/* Seção de Jogos */
+/* Área do Chatbot (Topo) */
+.chatbot-area {
+    width: 90%;
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    order: -1; /* Inverter a ordem visual, colocando-o no topo */
+}
+
+.chatbot-respect h2 {
+    color: #f39c12;
+    margin-top: 0;
+}
+
+.chatbot-respect ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.chatbot-widget h2 {
+    color: #f39c12;
+    margin-top: 0;
+}
+
+/* Seção de Jogos (Abaixo do Chatbot) */
 #jogos {
     width: 90%;
     margin-bottom: 20px;
@@ -110,19 +140,20 @@ body {
     background-color: #222;
     border-radius: 8px;
     color: #eee;
+    order: -2; /* Colocar abaixo do chatbot */
 }
 
 .team-and-info {
     display: flex;
-    flex-direction: column; /* Organizar time e info verticalmente */
-    align-items: center; /* Centralizar o conteúdo */
+    flex-direction: column;
+    align-items: center;
 }
 
 .lineup-section {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 20px; /* Espaçamento entre a imagem e as informações */
+    margin-bottom: 20px;
 }
 
 .lineup-section img {
@@ -145,34 +176,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Área do Chatbot (Isolada) */
-.chatbot-area {
-    width: 90%;
-    background-color: #333;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    color: #eee;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaçamento entre a info e o widget */
-}
-
-.chatbot-respect h2 {
-    color: #f39c12;
-    margin-top: 0;
-}
-
-.chatbot-respect ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.chatbot-widget h2 {
-    color: #f39c12;
-    margin-top: 0;
-}
-
 /* Seção de notícias elegante */
 #noticias {
     width: 90%;
@@ -180,11 +183,12 @@ body {
     background-color: #111;
     padding: 20px;
     border-radius: 12px;
+    order: -3; /* Colocar abaixo do time */
 }
 
 .latest-news {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr; /* Alterado para uma coluna para melhor visualização em tela cheia */
     gap: 20px;
 }
 
@@ -192,20 +196,27 @@ body {
     background-color: #222;
     padding: 15px;
     border-radius: 10px;
+    display: flex; /* Para alinhar imagem e texto */
+    gap: 15px;
+    align-items: center; /* Alinhar verticalmente */
 }
 
 .main-news img {
-    width: 100%;
+    max-width: 200px; /* Diminuir a largura da imagem */
     height: auto;
     border-radius: 10px;
 }
 
-.main-news h3,
-.news-item h3 {
-    color: #f39c12;
+.main-news-content {
+    flex: 1; /* O texto ocupa o restante do espaço */
 }
 
-.main-news a {
+.main-news-content h3 {
+    color: #f39c12;
+    margin-top: 0;
+}
+
+.main-news-content a {
     display: inline-block;
     margin-top: 10px;
     color: #fff;
@@ -217,6 +228,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 20px; /* Adicionar espaço acima das outras notícias */
 }
 
 .news-item {
@@ -225,8 +237,15 @@ body {
     border-radius: 8px;
 }
 
+.news-item h3 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 .news-item p {
     color: #aaa;
+    margin-bottom: 0;
 }
 
 #quem-somos,
@@ -298,13 +317,20 @@ h2 {
         margin: 10px 0;
     }
 
+    .chatbot-area {
+        width: 90%;
+        margin-top: 20px;
+        order: 0; /* Reset para a ordem normal em telas pequenas */
+    }
+
     #jogos {
         width: 90%;
         padding: 15px;
+        order: 0; /* Reset para a ordem normal em telas pequenas */
     }
 
     .team-and-info {
-        align-items: stretch; /* Esticar em telas menores */
+        align-items: stretch;
     }
 
     .lineup-section {
@@ -319,12 +345,22 @@ h2 {
         max-width: 200px;
     }
 
-    .chatbot-area {
+    #noticias {
         width: 90%;
-        margin-top: 20px;
+        padding: 15px;
+        order: 0; /* Reset para a ordem normal em telas pequenas */
     }
 
     .latest-news {
         grid-template-columns: 1fr;
+    }
+
+    .main-news {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-news img {
+        max-width: 100%;
     }
 }
