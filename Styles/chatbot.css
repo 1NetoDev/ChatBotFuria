@@ -2,160 +2,181 @@
 
 /* Importando a fonte Montserrat do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-.chatbot-presentation-area {
-    width: 100%;
-    background-color: #1a1a1a; /* Fundo mais escuro para contraste */
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 30px; /* Aumentando o padding interno */
-    color: #eee;
-    display: flex;
-    gap: 30px; /* Aumentando o espaçamento entre a apresentação e o widget */
-    order: -4;
-    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte Montserrat */
-}
-
-.chatbot-intro {
-    flex: 1; /* Ocupa mais espaço para a introdução */
-    margin-bottom: 20px;
-}
-
-.juba-banner {
-    display: block;
-    width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 800px; /* Largura máxima opcional */
-    height: auto; /* Para manter a proporção se for um GIF */
-    margin: 30px auto; /* Centralizar horizontalmente com margem superior e inferior */
-    border-radius: 10px; /* Opcional: bordas arredondadas */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    text-align: center; /* Centralizar o texto dentro do banner (se houver) */
-    background-color: #222; /* Cor de fundo de exemplo */
-    padding: 40px; /* Espaçamento interno maior */
-    font-size: 2.5em; /* Tamanho da fonte maior */
-    color: #f39c12; /* Cor do texto */
-    font-weight: bold;
-}
-/* Estilos para o painel informativo */
-.chatbot-info-panel {
-    width: 90%;
-    max-width: 960px;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout de grade responsivo */
-    gap: 20px;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 10px;
-}
-
-/* Estilos para cada banner informativo individual */
-.info-banner {
-    background-color: #333;
-    color: #eee;
-    padding: 20px;
-    border-radius: 8px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+.welcome-area {
     text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px; /* Aumentando ainda mais o padding vertical */
+    margin-bottom: 10px; /* Mantendo a margem inferior para separação */
+    background-color: transparent; /* Fundo transparente para se integrar */
+    color: #000000; /* Texto principal em branco */
+    border-radius: 0; /* Removendo bordas */
+    box-shadow: none; /* Removendo a sombra da caixa */
+    /* backdrop-filter: blur(10px); Removendo o efeito de vidro por enquanto */
+    border: none; /* Removendo a borda */
 }
 
-.info-banner i { /* Estilos para ícones (se usar Font Awesome ou similar) */
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #f39c12;
+.welcome-area h2 {
+    font-size: 4em; /* Aumentando ainda mais a fonte do título */
+    font-weight: bold;
+    margin-bottom: 20px; /* Mais espaço abaixo do título */
+    color: #ffffff; /* Trazendo a cor primária para o título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra suave no texto */
+    letter-spacing: 1px; /* Aumentando um pouco o espaçamento entre letras */
 }
 
-.info-banner h3 {
+.project-section {
+    width: 1000px; /* Ou a largura desejada */
+    display: flex;
+    align-items: flex-start;
+    gap: 40px; /* Espaçamento entre a descrição e as screenshots */
+    flex-direction: row; /* Alterando para row */
+    margin: 0 auto; /* Centralizar a seção, se desejado */
+}
+
+/* Estilos para a seção de descrição do projeto */
+.project-description {
+    flex: 0.6;
+    padding: 8px;
+    background-color: transparent;
+    color: #eee;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+}
+
+.project-description h3 {
     color: #f39c12;
+    font-size: 2.2em; /* Ligeiramente maior */
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left; /* Alinhando o título à esquerda também */
 }
 
-.info-banner p {
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-.chatbot-title {
-    color: #f39c12; /* Cor primária chamativa */
-    font-size: 2em;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.juba-name {
-    font-style: italic;
-    color: #fff;
-}
-
-.chatbot-greeting {
-    line-height: 1.6;
-    opacity: 0.8;
-}
-
-.chatbot-features {
-    flex: 1; /* Ocupa espaço para as funcionalidades */
-}
-
-.features-title {
-    color: #f39c12;
-    font-size: 1.5em;
+.project-description h4 {
+    color: #ddd;
+    font-size: 1.6em; /* Ligeiramente maior */
+    margin-top: 25px;
     margin-bottom: 15px;
-    font-weight: 600;
-    border-bottom: 2px solid #333; /* Linha de destaque */
-    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: left; /* Alinhando o subtítulo à esquerda também */
 }
 
-.features-list {
-    list-style: none;
-    padding-left: 0;
+.project-description p {
+    margin-bottom: 20px;
+    text-align: left; /* Alinhando os parágrafos à esquerda */
 }
 
-.feature-item {
+.project-description ul {
+    list-style-type: none;
+    padding-left: 20px;
+    text-align: left; /* Alinhando a lista à esquerda */
+}
+
+.project-description ul li {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    background-color: #222; /* Fundo sutil para cada item */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 12px;
 }
 
-.feature-icon {
-    font-size: 1.5em;
+.project-description ul li span {
     margin-right: 15px;
-    color: #f39c12; /* Ícone chamativo */
+    color: #f39c12;
+    font-size: 1.2em;
 }
 
-.feature-text {
-    line-height: 1.4;
+/* Estilos para a área de screenshots do chatbot */
+.chatbot-screenshots {
+    flex: 0.4;
+    padding: 8px;
+    overflow: hidden; /* Escondendo a rolagem */
+    display: flex;
+    flex-direction: column; /* Slides em coluna */
+    width: 100%;
+    height: 400px; /* Altura da área visível */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    position: relative; /* Adicionando position relative para conter a animação */
 }
 
-.feature-text strong {
-    font-weight: 600;
-    color: #fff; /* Destacando palavras-chave */
+.chatbot-screenshots h3 {
+    color: #f39c12;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    padding: 0 10px;
 }
+
+.carousel-container-screenshots {
+    display: flex;
+    flex-direction: column; /* Slides em coluna */
+    width: 100%;
+    transform: translateY(0); /* Posição inicial */
+    transition: transform 0.3s ease-in-out; /* Transição suave */
+    position: absolute; /* Tornando a posição absoluta para controlar o deslocamento */
+    top: 0; /* Alinhando ao topo do container pai */
+}
+
+.carousel-slide-screenshots {
+    width: 100%;
+    margin-bottom: 10px; /* Espaço entre os slides */
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.carousel-slide-screenshots img {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+}
+
 
 /* Widget do Chatbot (Manter os estilos existentes e ajustar se necessário) */
 .chatbot-widget {
-    width: 200px;
-    height: 500px;
+    width: 300px; /* Largura desejada (ajuste conforme necessário) */
+    height: 400px; /* Altura desejada (ajuste conforme necessário) */
     border-radius: 8px;
     overflow: hidden;
-    position: fixed; /* Mantendo o posicionamento fixo para o widget flutuante */
+    position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-    display: flex; /* Mantenha o flex para centralizar o iframe */
+    z-index: 1000;
+    background-color: transparent !important;
+}
+.chatbot-widget iframe[src*="chatling.ai"] {
+    position: fixed; /* Para sobrepor outros elementos, se necessário */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altura da barra de navegação (ajuste conforme necessário) */
+    opacity: 0; /* Tornando-a completamente transparente */
+    pointer-events: none; /* Evitando que ela capture eventos de clique */
+    z-index: -1; /* Colocando-a atrás de outros elementos */
 }
 
 .chatbot-widget #chatling-inline-bot {
     width: 100% !important;
     height: 100% !important;
+    border: none !important; /* Removendo qualquer borda do iframe
 }
+
 
 /* Estilos Responsivos para o Chatbot */
 @media (max-width: 768px) {
+    .chatbot-screenshots {
+        height: 300px;
+    }
+
     .chatbot-presentation-area {
         flex-direction: column;
         align-items: stretch;
@@ -188,3 +209,4 @@
         width: 90% !important; /* Ocupa 90% da largura em telas menores */
         height: 80% !important; /* Ocupa 80% da altura em telas menores */
         bottom: auto; /* Remova o posicionamento fixo inferior */
+}}}

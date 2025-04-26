@@ -1,10 +1,17 @@
+/* Styles/main.css */
 
-
+/* Estilos para o rodapé */
 .main-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
     width: 100%;
+    background-color: #1a1a1a; /* Cor de fundo escura, similar ao header */
+    color: #eee; /* Cor do texto clara */
+    padding: 20px;
+    text-align: center;
     box-sizing: border-box;
+    margin-top: 40px; /* Adiciona um espaço acima do footer */
+}
+
+.footer-copyright p {
+    font-size: 0.9em;
+    margin: 0;
 }

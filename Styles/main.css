@@ -1,32 +1,43 @@
-/* Estilos globais para o projeto */
+/* Styles/main.css */
 .container {
-    width: 100%; /* Cobrir toda a largura */
-    margin: 0; /* Remover margens laterais */
-    padding: 20px;
-    background-color: #1a1a1a;
+    width: 100%;
+    margin: 0;
+    padding: 5px 4px 0px 4px;
+    background-color: #101010; /* Mantendo o fundo preto/escuro para o container principal */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centralizar o conteúdo horizontalmente */
-    box-sizing: border-box; /* Incluir padding na largura total */
+    align-items: center;
+    box-sizing: border-box;
 }
 
 #CS-Go {
-    width: 90%;
+    width: 100%;
     margin-bottom: 20px;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 8px;
-    color: #eee;
-    order: -3;
+    padding: 0px 0px;
+    background-color: #fff; /* Alterando para fundo branco */
+    color: #333; /* Alterando a cor do texto para melhor contraste com o branco */
     text-align: center;
 }
 
 .team-section-title {
-    color: #f39c12;
-    margin-top: 30px; /* Adiciona um espaço acima dos títulos de Coach e Reservas */
-    margin-bottom: 15px;
-    font-size: 1.3em;
+    width: 100%;
+    color: #000000;
+    font-size: 2.0em;
     font-weight: bold;
+    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+}
+
+h3.team-section-title {
+    color: rgb(255, 255, 255); /* Cor preta para o texto */
+    font-size: 3.5em; /* Tornando o texto bem grande */
+    font-weight: bold; /* Deixando a fonte em negrito */
+    text-align: center; /* Centralizando o texto */
+    margin: 0px; /* Adicionando uma margem superior para espaçamento */
+    margin-bottom: 10px; /* Adicionando uma margem inferior para espaçamento */
+    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
+    background-color: #101010; /* Adicionando uma cor de fundo chamativa (opcional) */
+    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras para um efeito estilizado */
+    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
 }
 
 .Line-section,
@@ -34,61 +45,73 @@
 .reserves-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 15px; /* Adiciona um pequeno espaço abaixo dos títulos */
+    gap: 5px;
+    margin-top: 10px;
 }
 
 .player-card {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 15px;
+    background-color: #ffffff; /* Um tom de cinza claro para os cards no fundo branco */
+    padding: 5px;
     text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .player-card img {
     width: 100%;
-    max-width: 120px;
-    height: auto;
+    max-width: 200px;
+    height: 250px;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     object-fit: cover;
 }
 
 .player-name {
-    color: #f39c12;
+    color: #000000; /* Texto preto */
+    font-weight: bold; /* Deixando a fonte em negrito */
     margin-bottom: 5px;
     font-size: 1.1em;
 }
 
 .player-role {
-    color: #aaa;
+    color: #777; /* Cinza mais claro */
     font-size: 0.9em;
 }
 
 /* Seção de notícias no estilo do Corinthians */
+h3.noticias-section-title{
+    color: #ffffff; /* Cor preta para o texto */
+    font-size: 3.5em; /* Tornando o texto bem grande */
+    font-weight: bold; /* Deixando a fonte em negrito */
+    text-align: center; /* Centralizando o texto */
+    margin: 0px; /* Adicionando uma margem superior para espaçamento */
+    margin-bottom: 0px; /* Adicionando uma margem inferior para espaçamento */
+    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
+    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras para um efeito estilizado */
+    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+}
+/* Seção de notícias com estilo oposto ao CS-GO */
+
 #noticias {
-    width: 90%;
-    margin-bottom: 30px;
-    background-color: #111;
-    padding: 20px;
-    border-radius: 12px;
-    order: -2; /* Colocar abaixo do time */
-    text-align: center; /* Centralizar o título da seção */
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 0; /* Adicionando padding vertical */
+    background-color: #101010; /* Fundo branco (oposto ao #101010 do CS-GO) */
+    text-align: center;
+    color: #ffffff; /* Cor do texto preta (oposto ao #333 do CS-GO) */
 }
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas com largura mínima de 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
     gap: 20px; /* Espaçamento entre os itens da grade */
     margin-top: 20px; /* Espaçamento entre o título e a grade */
+    padding: 20px; /* Adicionando padding interno à grade */
 }
 
 .news-item {
-    background-color: #222;
+    background-color: #252424; /* Tom de cinza claro para os itens de notícia (oposto ao preto do card de jogador) */
     padding: 15px;
-    border-radius: 10px;
-    text-align: left; /* Alinhar o texto dentro de cada item à esquerda */
+    text-align: left;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adicionando uma leve sombra */
 }
 
 .news-item img {
@@ -96,26 +119,26 @@
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
-    display: block; /* Evitar espaçamento extra abaixo da imagem */
+    display: block;
 }
 
 .news-item h3 {
-    color: #f39c12;
+    color: #ffffff;
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.2em;
 }
 
 .news-item .news-info {
-    color: #aaa;
+    color: #777;
     font-size: 0.9em;
     margin-bottom: 10px;
 }
 
 .news-item a {
     display: inline-block;
-    background-color: #333;
-    color: #eee;
+    background-color: #101010; /* Cor de fundo preta (oposto ao branco do link do jogador) */
+    color: #eee; /* Cor do texto branca (oposto ao preto do link do jogador) */
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -127,48 +150,6 @@
     color: #111;
 }
 
-/* Removendo os estilos antigos da seção de notícias */
-.latest-news, .main-news, .other-news, .news-item h3 {
-    /* Estes estilos não serão mais utilizados com a nova estrutura */
-}
-
-/* Seção "Sobre nós" (Quem Somos) */
-#quem-somos {
-    width: 90%;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    color: #eee;
-    order: -1; /* Colocar abaixo das notícias */
-}
-
-#quem-somos h2 {
-    color: #f39c12;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-#quem-somos p {
-    margin-bottom: 0;
-}
-
-#loja,
-#contato {
-    width: 90%;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    color: #eee;
-}
-
-h2 {
-    color: #f39c12;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
 /* Estilos Responsivos para o Main */
 @media (max-width: 768px) {
     .container {
@@ -178,53 +159,26 @@ h2 {
     #CS-Go {
         width: 90%;
         padding: 15px;
-        order: 0;
-    }
-
-    .team-and-info {
-        align-items: stretch;
-    }
-
-    .lineup-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .lineup-section img {
-        width: 100%;
-        max-width: 200px;
     }
 
     #noticias {
         width: 90%;
         padding: 15px;
-        order: 0;
-        text-align: center; /* Centralizar o título em telas menores também */
     }
 
     .news-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
-        gap: 15px;
+        padding: 10px;
+        gap: 10px;
     }
 
     .news-item {
-        text-align: left; /* Manter o alinhamento à esquerda nos itens em telas menores */
+        padding: 10px;
     }
 
-    .main-news {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .main-news img {
-        max-width: 100%;
-    }
-
-    #quem-somos {
+    #quem-somos,
+    #loja,
+    #contato {
         width: 90%;
         padding: 15px;
-        order: 0;
     }
 }
