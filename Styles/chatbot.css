@@ -22,14 +22,58 @@
 }
 
 .juba-banner {
-    display: block; /* Para ocupar a largura definida e permitir margens */
-    width: 70%; /* Sugestão de largura (ajuste conforme necessário) */
-    height: auto; /* Para manter a proporção do GIF */
-    margin-top: 15px; /* Espaço acima do banner */
-    margin-left: auto; /* Centralizar horizontalmente */
-    margin-right: auto; /* Centralizar horizontalmente */
-    border-radius: 5px; /* Opcional: Arredondar as bordas do banner */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Opcional: Adicionar uma sombra suave */
+    display: block;
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 800px; /* Largura máxima opcional */
+    height: auto; /* Para manter a proporção se for um GIF */
+    margin: 30px auto; /* Centralizar horizontalmente com margem superior e inferior */
+    border-radius: 10px; /* Opcional: bordas arredondadas */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    text-align: center; /* Centralizar o texto dentro do banner (se houver) */
+    background-color: #222; /* Cor de fundo de exemplo */
+    padding: 40px; /* Espaçamento interno maior */
+    font-size: 2.5em; /* Tamanho da fonte maior */
+    color: #f39c12; /* Cor do texto */
+    font-weight: bold;
+}
+/* Estilos para o painel informativo */
+.chatbot-info-panel {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout de grade responsivo */
+    gap: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+/* Estilos para cada banner informativo individual */
+.info-banner {
+    background-color: #333;
+    color: #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.info-banner i { /* Estilos para ícones (se usar Font Awesome ou similar) */
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.info-banner h3 {
+    color: #f39c12;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.info-banner p {
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .chatbot-title {
@@ -94,8 +138,8 @@
 
 /* Widget do Chatbot (Manter os estilos existentes e ajustar se necessário) */
 .chatbot-widget {
-    width: 100px;
-    height: 300px;
+    width: 200px;
+    height: 500px;
     border-radius: 8px;
     overflow: hidden;
     position: fixed; /* Mantendo o posicionamento fixo para o widget flutuante */
@@ -103,13 +147,11 @@
     right: 20px;
     z-index: 1000; /* Garante que fique acima de outros elementos */
     display: flex; /* Mantenha o flex para centralizar o iframe */
-    flex-direction: column;
-    justify-content: center;
 }
 
 .chatbot-widget #chatling-inline-bot {
     width: 100% !important;
-    height: 300px !important;
+    height: 100% !important;
 }
 
 /* Estilos Responsivos para o Chatbot */
@@ -143,18 +185,6 @@
     }
 
     .chatbot-widget {
-        width: 60px;
-        height: 60px;
-        bottom: 15px;
-        right: 15px;
-        display: flex; /* Mantenha o flex para centralizar o ícone */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .chatbot-widget #chatling-inline-bot {
-        /* Estilos para o bot inline quando aberto em telas menores (se aplicável) */
-        width: 100% !important;
-        height: auto !important; /* Ajuste a altura para o conteúdo */
-    }
-}
+        width: 90% !important; /* Ocupa 90% da largura em telas menores */
+        height: 80% !important; /* Ocupa 80% da altura em telas menores */
+        bottom: auto; /* Remova o posicionamento fixo inferior */
