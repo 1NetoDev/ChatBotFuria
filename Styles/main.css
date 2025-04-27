@@ -92,62 +92,82 @@ h3.noticias-section-title{
 
 #noticias {
     width: 100%;
-    margin-bottom: 20px;
-    padding: 5px 0; /* Adicionando padding vertical */
-    background-color: #101010; /* Fundo branco (oposto ao #101010 do CS-GO) */
+    padding: 20px 0;
+    background-color: #101010;
+    color: #eee;
     text-align: center;
-    color: #ffffff; /* Cor do texto preta (oposto ao #333 do CS-GO) */
+    overflow: hidden; /* Esconde as notícias que estão fora da área visível */
 }
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
-    gap: 20px; /* Espaçamento entre os itens da grade */
-    margin-top: 20px; /* Espaçamento entre o título e a grade */
-    padding: 20px; /* Adicionando padding interno à grade */
+.news-carousel-container {
+    overflow: hidden; /* Garante que o wrapper não vaze */
+    width: 100%;
+}
+
+.news-carousel-wrapper {
+    display: flex; /* Coloca os itens de notícia em linha horizontal */
+    transition: transform 0.5s linear; /* Transição suave para a animação */
+    width: fit-content; /* Ocupa a largura total dos itens de notícia */
 }
 
 .news-item {
-    background-color: #252424; /* Tom de cinza claro para os itens de notícia (oposto ao preto do card de jogador) */
-    padding: 15px;
+    background-color: #000000;
+    color: #eee;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    width: 300px; /* Largura de cada item de notícia */
+    flex-shrink: 0; /* Impede que os itens encolham */
     text-align: left;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adicionando uma leve sombra */
 }
 
 .news-item img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     margin-bottom: 10px;
-    display: block;
 }
 
 .news-item h3 {
-    color: #ffffff;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.2em;
+    color: #f39c12;
+    margin: 10px;
+    font-size: 1.1em;
 }
 
 .news-item .news-info {
-    color: #777;
+    color: #ccc;
     font-size: 0.9em;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
 }
 
 .news-item a {
     display: inline-block;
-    background-color: #101010; /* Cor de fundo preta (oposto ao branco do link do jogador) */
-    color: #eee; /* Cor do texto branca (oposto ao preto do link do jogador) */
+    background-color: #333;
+    color: #eee;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
+    margin: 10px;
     transition: background-color 0.3s ease;
 }
 
 .news-item a:hover {
     background-color: #f39c12;
     color: #111;
+}
+
+/* Ajuste para garantir que 3 notícias sejam sempre visíveis */
+@media (min-width: 961px) { /* Para telas maiores que 3 * 300px + margens */
+    .news-carousel-container {
+        width: 960px; /* 3 * 300px (largura do item) + 2 * 30px (margens laterais) */
+        margin: 0 auto; /* Centralizar o container */
+    }
+}
+
+@media (max-width: 960px) {
+    .news-carousel-container {
+        width: 100%; /* Ocupar toda a largura em telas menores */
+    }
 }
 
 /* Estilos Responsivos para o Main */

@@ -3,37 +3,39 @@
 /* Importando a fonte Montserrat do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Estilos gerais e welcome area */
 .welcome-area {
     text-align: center;
-    padding: 5px 5px; /* Aumentando ainda mais o padding vertical */
-    margin-bottom: 10px; /* Mantendo a margem inferior para separação */
-    background-color: transparent; /* Fundo transparente para se integrar */
-    color: #000000; /* Texto principal em branco */
-    border-radius: 0; /* Removendo bordas */
-    box-shadow: none; /* Removendo a sombra da caixa */
-    /* backdrop-filter: blur(10px); Removendo o efeito de vidro por enquanto */
-    border: none; /* Removendo a borda */
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    color: #000000;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
 }
 
 .welcome-area h2 {
-    font-size: 4em; /* Aumentando ainda mais a fonte do título */
+    font-size: 4em;
     font-weight: bold;
-    margin-bottom: 20px; /* Mais espaço abaixo do título */
-    color: #ffffff; /* Trazendo a cor primária para o título */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra suave no texto */
-    letter-spacing: 1px; /* Aumentando um pouco o espaçamento entre letras */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
 }
 
+/* Seção principal do projeto */
 .project-section {
-    width: 1000px; /* Ou a largura desejada */
+    width: 1000px;
     display: flex;
     align-items: flex-start;
-    gap: 40px; /* Espaçamento entre a descrição e as screenshots */
-    flex-direction: row; /* Alterando para row */
-    margin: 0 auto; /* Centralizar a seção, se desejado */
+    gap: 40px;
+    flex-direction: row;
+    margin: 0 auto;
 }
 
-/* Estilos para a seção de descrição do projeto */
+/* Descrição do projeto */
 .project-description {
     flex: 0.6;
     padding: 8px;
@@ -48,31 +50,31 @@
 
 .project-description h3 {
     color: #f39c12;
-    font-size: 2.2em; /* Ligeiramente maior */
+    font-size: 2.2em;
     margin-top: 0;
     margin-bottom: 5px;
     font-weight: bold;
-    text-align: left; /* Alinhando o título à esquerda também */
+    text-align: left;
 }
 
 .project-description h4 {
     color: #ddd;
-    font-size: 1.6em; /* Ligeiramente maior */
+    font-size: 1.6em;
     margin-top: 25px;
     margin-bottom: 15px;
     font-weight: bold;
-    text-align: left; /* Alinhando o subtítulo à esquerda também */
+    text-align: left;
 }
 
 .project-description p {
     margin-bottom: 20px;
-    text-align: left; /* Alinhando os parágrafos à esquerda */
+    text-align: left;
 }
 
 .project-description ul {
     list-style-type: none;
     padding-left: 20px;
-    text-align: left; /* Alinhando a lista à esquerda */
+    text-align: left;
 }
 
 .project-description ul li {
@@ -87,64 +89,64 @@
     font-size: 1.2em;
 }
 
-/* Estilos para a área de screenshots do chatbot */
+/* Área de screenshots do chatbot */
 .chatbot-screenshots {
     flex: 0.4;
     padding: 8px;
-    overflow: hidden; /* Escondendo a rolagem */
-    display: flex;
-    flex-direction: column; /* Slides em coluna */
-    width: 100%;
-    height: 400px; /* Altura da área visível */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 550px;
     box-sizing: border-box;
-    position: relative; /* Adicionando position relative para conter a animação */
 }
 
 .chatbot-screenshots h3 {
     color: #f39c12;
-    font-size: 1.8em;
+    font-size: 2.2em;
     margin-top: 0;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 15px; /* Aumentei a margem inferior para espaçamento */
     font-weight: bold;
-    padding: 0 10px;
+    text-align: center; /* Centralizei o título */
 }
 
 .carousel-container-screenshots {
-    display: flex;
-    flex-direction: column; /* Slides em coluna */
+    position: absolute;
+    top: 40px; /* Ajustei o top para dar espaço ao título */
+    left: 0;
     width: 100%;
-    transform: translateY(0); /* Posição inicial */
-    transition: transform 0.3s ease-in-out; /* Transição suave */
-    position: absolute; /* Tornando a posição absoluta para controlar o deslocamento */
-    top: 0; /* Alinhando ao topo do container pai */
+    height: calc(100% - 40px); /* Ajustei a altura para não sobrepor o título */
 }
 
 .carousel-slide-screenshots {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 10px; /* Espaço entre os slides */
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex; /* Centralizar a imagem */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+}
+
+.carousel-slide-screenshots.active {
+    opacity: 1;
 }
 
 .carousel-slide-screenshots img {
     display: block;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90%; /* Ajustei para um tamanho máximo */
+    max-height: 90%; /* Ajustei para um tamanho máximo */
     width: auto;
     height: auto;
+    object-fit: contain; /* Mantendo o contain para não cortar */
 }
 
-
-/* Widget do Chatbot (Manter os estilos existentes e ajustar se necessário) */
+/* Widget do Chatbot */
 .chatbot-widget {
-    width: 300px; /* Largura desejada (ajuste conforme necessário) */
-    height: 400px; /* Altura desejada (ajuste conforme necessário) */
+    width: 300px;
+    height: 400px;
     border-radius: 8px;
     overflow: hidden;
     position: fixed;
@@ -153,23 +155,23 @@
     z-index: 1000;
     background-color: transparent !important;
 }
+
 .chatbot-widget iframe[src*="chatling.ai"] {
-    position: fixed; /* Para sobrepor outros elementos, se necessário */
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Altura da barra de navegação (ajuste conforme necessário) */
-    opacity: 0; /* Tornando-a completamente transparente */
-    pointer-events: none; /* Evitando que ela capture eventos de clique */
-    z-index: -1; /* Colocando-a atrás de outros elementos */
+    height: 60px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .chatbot-widget #chatling-inline-bot {
     width: 100% !important;
     height: 100% !important;
-    border: none !important; /* Removendo qualquer borda do iframe
+    border: none !important;
 }
-
 
 /* Estilos Responsivos para o Chatbot */
 @media (max-width: 768px) {
@@ -206,7 +208,8 @@
     }
 
     .chatbot-widget {
-        width: 90% !important; /* Ocupa 90% da largura em telas menores */
-        height: 80% !important; /* Ocupa 80% da altura em telas menores */
-        bottom: auto; /* Remova o posicionamento fixo inferior */
-}}}
+        width: 90% !important;
+        height: 80% !important;
+        bottom: auto;
+    }
+}
