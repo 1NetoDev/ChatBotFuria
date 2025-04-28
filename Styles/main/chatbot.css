@@ -20,8 +20,8 @@
 /* Estilos gerais e welcome area */
 .welcome-area {
     text-align: center;
-    padding: 5px;
-    margin-bottom: 10px;
+    padding: 40px 20px;
+    margin-bottom: 20px;
     background-color: transparent;
     color: #000000;
     border-radius: 0;
@@ -32,7 +32,7 @@
 .welcome-area h2 {
     font-size: 4em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
@@ -45,7 +45,7 @@
     align-items: flex-start;
     gap: 40px;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 20px auto
 }
 
 /* Descrição do projeto */
@@ -117,17 +117,17 @@
     color: #f39c12;
     font-size: 2.2em;
     margin-top: 0;
-    margin-bottom: 15px; /* Aumentei a margem inferior para espaçamento */
+    margin-bottom: 15px;
     font-weight: bold;
-    text-align: center; /* Centralizei o título */
+    text-align: center;
 }
 
 .carousel-container-screenshots {
     position: absolute;
-    top: 40px; /* Ajustei o top para dar espaço ao título */
+    top: 40px;
     left: 0;
     width: 100%;
-    height: calc(100% - 40px); /* Ajustei a altura para não sobrepor o título */
+    height: calc(100% - 40px);
 }
 
 .carousel-slide-screenshots {
@@ -138,25 +138,28 @@
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    display: flex; /* Centralizar a imagem */
-    justify-content: center; /* Centralizar horizontalmente */
-    align-items: center; /* Centralizar verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .carousel-slide-screenshots.active {
     opacity: 1;
 }
+
 .carousel-slide-screenshots img {
     display: block;
-    max-width: 90%; /* Ajustei para um tamanho máximo */
-    max-height: 90%; /* Ajustei para um tamanho máximo */
+    max-width: 90%;
+    max-height: 90%;
     width: auto;
     height: auto;
-    object-fit: contain; /* Mantendo o contain para não cortar */
+    object-fit: contain;
 }
+
 /* Widget do Chatbot */
 .chatbot-widget {
-    width: 300px;
-    height: 400px;
+    width: 400px;
+    height: 600px;
     border-radius: 8px;
     overflow: hidden;
     position: fixed;
@@ -165,6 +168,7 @@
     z-index: 1000;
     background-color: transparent !important;
 }
+
 .chatbot-widget iframe[src*="chatling.ai"] {
     position: fixed;
     bottom: 0;
@@ -175,6 +179,7 @@
     pointer-events: none;
     z-index: -1;
 }
+
 .chatbot-widget #chatling-inline-bot {
     width: 100% !important;
     height: 100% !important;
@@ -187,37 +192,37 @@
         height: 300px;
     }
 
-    .chatbot-presentation-area {
+    .project-section {
         flex-direction: column;
         align-items: stretch;
         padding: 20px;
         gap: 20px;
+        width: 90%; /* Ocupar mais largura em telas menores */
     }
 
-    .chatbot-intro {
+    .welcome-area {
+        padding: 20px;
         margin-bottom: 15px;
     }
 
-    .chatbot-title {
+    .welcome-area h2 {
+        font-size: 2.5em;
+    }
+
+    .project-description h3 {
         font-size: 1.8em;
     }
 
-    .features-title {
-        font-size: 1.3em;
-    }
-
-    .feature-item {
-        padding: 10px;
-    }
-
-    .feature-icon {
-        font-size: 1.2em;
-        margin-right: 10px;
+    .project-description h4 {
+        font-size: 1.4em;
     }
 
     .chatbot-widget {
         width: 90% !important;
-        height: 80% !important;
+        height: 600px !important;
         bottom: auto;
+        top: 20px; /* Mover o widget para cima em telas menores */
+        right: auto;
+        left: 5%; /* Centralizar horizontalmente em telas menores */
     }
 }

@@ -19,9 +19,7 @@
  @import '/Styles/main/noticias.css';
  @import '/Styles/main/sobreNos.css';
  
- /* Reset básico para consistência entre navegadores */
  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
- /* Importando a fonte Montserrat do Google Fonts */
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
  
@@ -42,15 +40,15 @@
      overflow-x: hidden;
  }
  .container {
-     width: 100%;
-     margin: 0;
-     padding: 5px 4px 0px 4px;
-     background-color: #101010; /* Mantendo o fundo preto/escuro para o container principal */
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     box-sizing: border-box;
- }
+    width: 100%;
+    margin: 0;
+    padding: 120px 4px 0px 4px;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
  /* Estilos Responsivos para o Main */
  @media (max-width: 768px) {
      #elenco,
@@ -62,6 +60,6 @@
          padding: 15px;
      }
      .store-carousel-container {
-         width: 100%; /* Ocupa toda a largura em telas menores */
+         width: 100%;
      }
  }

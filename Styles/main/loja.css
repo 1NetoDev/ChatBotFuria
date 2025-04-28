@@ -2,28 +2,28 @@
 .store-section {
     width: 100%;
     padding: 40px 20px;
-    background-color: #f0f0f0; /* Fundo branco */
-    color: #333; /* Cor do texto invertida para preto */
+    background-color: #f0f0f0;
+    color: #333;
     text-align: center;
     overflow: hidden; /* Esconde os itens fora da área visível */
 }
 
 .store-section h2.team-section-title {
-    color: rgb(0, 0, 0); /* Cor preta para o texto */
-    font-size: 3.5em; /* Tornando o texto bem grande */
-    font-weight: bold; /* Deixando a fonte em negrito */
-    text-align: center; /* Centralizando o texto */
-    margin: 0px; /* Removendo margens padrão */
-    margin-bottom: 30px; /* Adicionando margem inferior para espaçamento */
-    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
-    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras */
-    text-transform: uppercase; /* Transformando o texto para maiúsculas */
+    color: rgb(0, 0, 0);
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 30px;
+    padding: 5px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 .store-call-to-action {
     margin-bottom: 30px;
     padding: 20px;
-    background-color: #ddd; /* Fundo um pouco mais escuro para contraste */
+    background-color: #ddd;
     border-radius: 8px;
 }
 
@@ -34,8 +34,8 @@
 
 .store-call-to-action a.store-link {
     display: inline-block;
-    background-color: #111; /* Cor do botão invertida para preto */
-    color: #f39c12; /* Texto do botão invertido para amarelo */
+    background-color: #111;
+    color: #f39c12;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -50,22 +50,22 @@
 .store-carousel-container {
     overflow-x: hidden; /* Esconde os itens que excedem a largura */
     width: calc(5 * (250px + 20px)); /* Largura para mostrar 5 itens */
-    margin: 0 auto; /* Centraliza o container */
+    margin: 0 auto;
     position: relative; /* Para posicionar o wrapper dentro */
 }
 
 .store-carousel-wrapper {
-    display: flex; /* Organiza os itens horizontalmente */
-    transition: transform 0.5s ease-in-out; /* Transição suave para a animação */
-    width: fit-content; /* Largura total dos itens */
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+    width: fit-content;
 }
 
 .store-product-card {
-    background-color: #ddd; /* Fundo do card mais claro */
+    background-color: #ddd;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     width: 250px;
-    flex: 0 0 auto; /* Impede que os itens encolham ou estiquem */
+    flex: 0 0 auto;
     text-align: center;
     padding: 15px;
     box-sizing: border-box;
@@ -86,7 +86,7 @@
 }
 
 .store-product-card h3 {
-    color: #333; /* Texto do título preto */
+    color: #333;
     font-size: 1.1em;
     margin-bottom: 5px;
     min-height: 50px;
@@ -97,7 +97,7 @@
 }
 
 .store-product-card p.product-price {
-    color: #f39c12; /* Preço amarelo */
+    color: #f39c12;
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
@@ -105,8 +105,8 @@
 
 .store-product-card a.buy-button {
     display: inline-block;
-    background-color: #f39c12; /* Botão amarelo */
-    color: #111; /* Texto do botão preto */
+    background-color: #f39c12;
+    color: #111;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -115,30 +115,30 @@
 }
 
 .store-product-card a.buy-button:hover {
-    background-color: #e08e0b; /* Hover do botão */
+    background-color: #e08e0b;
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .store-carousel-container {
-        width: 100%; /* Ocupa toda a largura em telas menores */
+        width: 100%;
     }
 
     .store-carousel-wrapper {
-        flex-wrap: wrap; /* Quebra os itens para a próxima linha em telas menores */
-        justify-content: center; /* Centraliza os itens em telas menores */
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .store-product-card {
-        width: calc(50% - 20px); /* Dois itens por linha em telas menores */
+        width: calc(50% - 20px);
         margin-bottom: 20px;
     }
 
     .store-product-card:last-child {
-        margin-right: 20px; /* Garante margem direita no último da linha */
+        margin-right: 20px;
     }
 
     .store-product-card:nth-child(odd) {
-        margin-right: 20px; /* Adiciona margem direita nos itens ímpares */
+        margin-right: 20px;
     }
 }
