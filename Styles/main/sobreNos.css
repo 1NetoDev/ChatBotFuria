@@ -1,25 +1,37 @@
-/* Seção de sobre nós */
-.about-us-section {
+/*
+ * Estilos para a seção "Sobre Nós" do site.
+ *
+ * .about-us-section: Container principal da seção "Sobre Nós".
+ * .about-us-section h2.team-section-title: Título principal da seção "Sobre Nós".
+ * .about-us-content: Container para o conteúdo da seção (descrição e carrossel).
+ * .about-us-description: Container para a descrição da organização.
+ * .about-us-description h3: Títulos dentro da descrição.
+ * .about-us-description ul: Lista dentro da descrição.
+ * .about-us-carousel: Container para o carrossel de imagens.
+ * .carousel-container-about-us: Container interno para os slides do carrossel.
+ * .carousel-slide-about-us: Cada slide individual do carrossel.
+ * .carousel-slide-about-us.active: Slide ativo (visível) do carrossel.
+ * .carousel-slide-about-us img: Estilo das imagens dentro do carrossel.
+ * @media (max-width: 768px): Estilos para telas menores (responsividade).
+ */
+ .about-us-section {
     width: 100%;
     padding: 40px 20px;
     background-color: #101010;
     color: #eee;
     text-align: center;
 }
-
 /* Padronização do título "SOBRE NÓS" */
 .about-us-section h2.team-section-title {
-    color: rgb(255, 255, 255); /* Cor branca para o texto */
-    font-size: 3.5em; /* Tornando o texto bem grande */
-    font-weight: bold; /* Deixando a fonte em negrito */
-    text-align: center; /* Centralizando o texto */
-    margin: 0px; /* Removendo margens padrão */
-    margin-bottom: 30px; /* Adicionando margem inferior para espaçamento */
-    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
-    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras */
-    text-transform: uppercase; /* Transformando o texto para maiúsculas */
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 30px;
+    padding: 5px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
-
 .about-us-content {
     display: flex;
     justify-content: space-between;
@@ -29,34 +41,29 @@
     gap: 40px;
     flex-wrap: wrap;
 }
-
 .about-us-description {
     flex: 1;
     text-align: left;
 }
-
 .about-us-description h3 {
-    color: #f39c12; /* Cor do título "O QUE É O JUBA?" */
-    font-size: 1.5em; /* Tamanho da fonte do título "O QUE É O JUBA?" (ajuste se necessário) */
-    margin-top: 20px; /* Margem superior (ajuste se necessário) */
-    margin-bottom: 10px; /* Margem inferior (ajuste se necessário) */
-    text-transform: uppercase; /* Exemplo de outra propriedade comum */
+    color: #f39c12;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
-
 .about-us-description ul {
     list-style-type: disc;
     padding-left: 20px;
 }
-
 .about-us-carousel {
-    width: 500px; /* Aumentando a largura do carrossel */
-    height: 300px; /* Aumentando a altura do carrossel */
+    width: 500px;
+    height: 300px;
     overflow: hidden;
     position: relative;
-    border: 5px solid #333; /* Adicionando uma borda como moldura */
-    box-sizing: border-box; /* Inclui a borda na largura e altura */
+    border: 5px solid #333;
+    box-sizing: border-box;
 }
-
 .carousel-container-about-us {
     position: absolute;
     top: 0;
@@ -64,7 +71,6 @@
     width: 100%;
     height: 100%;
 }
-
 .carousel-slide-about-us {
     position: absolute;
     top: 0;
@@ -77,26 +83,22 @@
     justify-content: center;
     align-items: center;
 }
-
 .carousel-slide-about-us.active {
     opacity: 1;
 }
-
 .carousel-slide-about-us img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Garante que a imagem caiba dentro sem cortar, mostrando as proporções */
+    object-fit: contain;
 }
-
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .about-us-content {
-        flex-direction: column; /* Empilha a descrição e o carrossel em telas menores */
-        align-items: stretch; /* Estica os itens para a largura total */
+        flex-direction: column;
+        align-items: stretch;
     }
-
     .about-us-carousel {
-        width: 100%; /* Ocupa a largura total em telas menores */
-        height: auto; /* Ajusta a altura automaticamente */
+        width: 100%;
+        height: auto;
     }
 }

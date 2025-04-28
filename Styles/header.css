@@ -1,144 +1,104 @@
-/* Styles/header.css */
-
-/* Header */
-.main-header {
+/*
+ * Estilos para o cabeçalho (header) do site.
+ *
+ * .main-header: Container principal do cabeçalho, utiliza flexbox para o layout.
+ * .header-main-nav: Container da barra de navegação principal, alinhada à direita.
+ * .header-main-nav ul: Lista não ordenada dos links de navegação.
+ * .header-main-nav ul li: Item da lista de navegação.
+ * .header-main-nav ul li a: Link de navegação.
+ * .header-main-nav ul li a:hover: Estilo do link ao passar o mouse.
+ * .header-logo-container: Container da logo, centralizada.
+ * .header-logo: Estilo da imagem da logo.
+ * .header-icons: Container dos ícones de redes sociais, alinhados à direita.
+ * .header-icons a img: Estilo das imagens dos ícones de redes sociais.
+ * @media (max-width: 768px): Estilos para telas menores (responsividade).
+ */
+ .main-header {
     display: flex;
-    flex-direction: column; /* Empilhar as linhas */
     width: 100%;
     box-sizing: border-box;
-    align-items: center; /* Centralizar a segunda linha (nav) */
-    background-color: #fff; /* Novo: Cor de fundo branca para o header */
+    background-color: #fff;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
 }
-
-/* Primeira Linha (Busca, Logo, Ícones) */
-.header-top-row {
-    background-color: #fff; /* Novo: Cor de fundo branca para a linha */
-    padding: 10px 5px 1px 5px;
-    display: flex;
-    justify-content: space-between; /* Espaço entre os elementos */
-    align-items: center; /* Alinhar verticalmente */
-    width: 100%; /* Largura da linha */
+/* Barra de Navegação Principal na Esquerda */
+.header-main-nav {
+    background-color: transparent;
+    color: #000000;
+    padding: 0;
+    width: auto;
     box-sizing: border-box;
-}
-
-/* Busca */
-.header-search {
-    display: flex;
-    background-color: #fff; /* Opcional: Fundo branco para a busca */
-    border-radius: 5px; /* Opcional: Adiciona um arredondamento */
-    padding: 2px; /* Opcional: Ajusta o padding interno */
-}
-
-.header-search input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    color: #333;
-    border-right: none; /* Opcional: Remove a borda direita para juntar com o botão */
-}
-
-.header-search button {
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 8px 10px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    border-left: none; /* Opcional: Remove a borda esquerda para juntar com o input */
-}
-
-/* Container da Logo */
-.header-logo-container {
-    /* Não precisa de estilos específicos de posicionamento aqui */
-    background-color: #fff; /* Novo: Cor de fundo branca para o container da logo */
-    padding: 5px 0; /* Opcional: Adiciona um pouco de padding vertical */
-}
-
-/* Logo */
-.header-logo {
-    width: 150px; /* Ajuste o tamanho da logo conforme necessário */
-    height: auto;
-}
-
-/* Ícones de Redes Sociais */
-.header-icons {
     display: flex;
     align-items: center;
-    background-color: #fff; /* Novo: Cor de fundo branca para os ícones */
-    padding: 5px 0; /* Opcional: Adiciona um pouco de padding vertical */
 }
-
-.header-icons a {
-    margin-left: 10px; /* Espaçamento entre os ícones */
-    /* background-color: transparent; Removendo qualquer background-color explícito */
-}
-
-.header-icons img {
-    width: 40px; /* Tamanho dos ícones (ajuste conforme necessário) */
-    height: 40px;
-    vertical-align: middle;
-    /* background-color: transparent; Removendo qualquer background-color explícito */
-}
-
-/* Barra de Navegação Principal Branca */
-.header-main-nav {
-    background-color: #fff; /* Já estava branco */
-    color: #333;
-    padding: 2px 5px;
-    width: 90%;
-    box-sizing: border-box;
-    margin-top: 2px; /* Espaço entre a primeira e a segunda linha */
-}
-
 .header-main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center; /* Centralizar os links */
 }
-
 .header-main-nav ul li {
-    margin: 0 20px; /* Espaçamento entre os links */
+    margin-right: 20px;
 }
-
+.header-main-nav ul li:first-child {
+    margin-left: 0;
+}
 .header-main-nav ul li a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
+    font-size: 1.2em;
 }
-
 .header-main-nav ul li a:hover {
-    color: #f39c12; /* Cor ao passar o mouse (opcional) */
+    color: #f39c12;
 }
-
+/* Container da Logo (Centralizada) */
+.header-logo-container {
+    justify-content: center;
+    width: 300px;
+    margin-left: calc(5% - (100px / 1));
+}
+.header-logo {
+    width: 150px;
+    height: auto;
+    justify-content: center;
+}
+/* Ícones de Redes Sociais (Direita) */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.header-icons a img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
 /* Estilos Responsivos para o Header */
 @media (max-width: 768px) {
-    .header-top-row {
-        flex-direction: column;
-        align-items: center;
+    .main-header {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente*/
     }
 
-    .header-search {
-        margin-bottom: 10px;
-        width: 100%;
+    .header-main-nav {
+        margin-left: 0;
+        justify-content: center; /* Centraliza a navegação*/
+        width: 100%; /* Ocupa toda a largura */
+        margin-top: 10px; 
     }
 
     .header-logo-container {
-        margin-bottom: 10px;
+        margin: 20px 0; /* Adiciona margem vertical para separar a logo */
+        width: 100%; /* Ocupa toda a largura para centralizar */
     }
 
     .header-icons {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .header-main-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-main-nav ul li {
-        margin: 10px 0;
+        margin-right: 0; 
+        justify-content: center; /* Centraliza os ícones em telas menores */
+        width: 100%; 
+        margin-bottom: 10px;
     }
 }

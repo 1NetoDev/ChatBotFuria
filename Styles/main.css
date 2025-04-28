@@ -1,31 +1,67 @@
-/* Styles/main.css */
-@import '/Styles/main/chatbot.css';
-@import '/Styles/main/elenco.css';
-@import '/Styles/main/loja.css';
-@import '/Styles/main/noticias.css';
-@import '/Styles/main/sobreNos.css';
+/*
+ * Estilos gerais e de layout para a estrutura principal (main) do site.
+ *
+ * @import '/Styles/main/chatbot.css': Importa os estilos específicos para a seção do chatbot.
+ * @import '/Styles/main/elenco.css': Importa os estilos específicos para a seção de elenco.
+ * @import '/Styles/main/loja.css': Importa os estilos específicos para a seção da loja.
+ * @import '/Styles/main/noticias.css': Importa os estilos específicos para a seção de notícias.
+ * @import '/Styles/main/sobreNos.css': Importa os estilos específicos para a seção "Sobre Nós".
+ * @import url(...): Importações de fontes do Google Fonts (Montserrat e Roboto Mono).
+ * body, h1-h6, p, ul, li: Reset básico de margens, paddings, bordas e estilos de lista.
+ * body: Estilos básicos para o elemento body (fonte, cor do texto, overflow horizontal oculto).
+ * .container: Container principal do conteúdo, centraliza e define o fundo.
+ * @media (max-width: 768px): Estilos responsivos para telas menores, ajustando a largura e padding de seções e carrosséis.
+ */
 
-.container {
-    width: 100%;
-    margin: 0;
-    padding: 5px 4px 0px 4px;
-    background-color: #101010; /* Mantendo o fundo preto/escuro para o container principal */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-/* Estilos Responsivos para o Main */
-@media (max-width: 768px) {
-    #elenco,
-    #noticias,
-    #sobreNos,
-    #loja,
-    #contato {
-        width: 90%;
-        padding: 15px;
-    }
-    .store-carousel-container {
-        width: 100%; /* Ocupa toda a largura em telas menores */
-    }
-}
+ @import '/Styles/main/chatbot.css';
+ @import '/Styles/main/elenco.css';
+ @import '/Styles/main/loja.css';
+ @import '/Styles/main/noticias.css';
+ @import '/Styles/main/sobreNos.css';
+ 
+ /* Reset básico para consistência entre navegadores */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+ /* Importando a fonte Montserrat do Google Fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+ 
+ body, h1, h2, h3, h4, h5, h6, p, ul, li {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font: inherit;
+     vertical-align: baseline;
+ }
+ ul {
+     list-style: none;
+ }
+ /* Estilos básicos para o body */
+ body {
+     font-family: "Montserrat", sans-serif;
+     color: #000000;
+     overflow-x: hidden;
+ }
+ .container {
+     width: 100%;
+     margin: 0;
+     padding: 5px 4px 0px 4px;
+     background-color: #101010; /* Mantendo o fundo preto/escuro para o container principal */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     box-sizing: border-box;
+ }
+ /* Estilos Responsivos para o Main */
+ @media (max-width: 768px) {
+     #elenco,
+     #noticias,
+     #sobreNos,
+     #loja,
+     #contato {
+         width: 90%;
+         padding: 15px;
+     }
+     .store-carousel-container {
+         width: 100%; /* Ocupa toda a largura em telas menores */
+     }
+ }

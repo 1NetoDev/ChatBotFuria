@@ -1,33 +1,40 @@
-#CS-Go {
+/* Estilos para a seção de elenco (CS-Go) do site.
+
+ * #CS-Go: Container principal da seção de elenco.
+ * .team-section-title: Título secundário da seção.
+ * h3.team-section-title: Título principal da seção.
+ * .Line-section, .coach-section, .reserves-section: Layout em grid para os cards de jogadores/coach/reservas.
+ * .player-card: Estilo de cada card individual de jogador/coach/reserva.
+ * .player-card img: Estilo da imagem do jogador/coach/reserva.
+ * .player-name: Estilo do nome do jogador/coach/reserva.
+ * .player-role: Estilo da função/posição do jogador/coach/reserva.
+ */
+ #CS-Go {
     width: 100%;
     margin-bottom: 20px;
-    padding: 0px 0px;
-    background-color: #fff; /* Alterando para fundo branco */
-    color: #333; /* Alterando a cor do texto para melhor contraste com o branco */
+    padding: 0;
+    background-color: #fff;
+    color: #000;
     text-align: center;
 }
-
 .team-section-title {
     width: 100%;
-    color: #000000;
+    color: #000;
     font-size: 2.0em;
     font-weight: bold;
-    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+    text-transform: uppercase;
 }
-
 h3.team-section-title {
-    color: rgb(255, 255, 255); /* Cor preta para o texto */
-    font-size: 3.5em; /* Tornando o texto bem grande */
-    font-weight: bold; /* Deixando a fonte em negrito */
-    text-align: center; /* Centralizando o texto */
-    margin: 0px; /* Adicionando uma margem superior para espaçamento */
-    margin-bottom: 10px; /* Adicionando uma margem inferior para espaçamento */
-    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
-    background-color: #101010; /* Adicionando uma cor de fundo chamativa (opcional) */
-    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras para um efeito estilizado */
-    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 10px;
+    padding: 5px;
+    background-color: #101010;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
-
 .Line-section,
 .coach-section,
 .reserves-section {
@@ -36,30 +43,26 @@ h3.team-section-title {
     gap: 5px;
     margin-top: 10px;
 }
-
 .player-card {
-    background-color: #ffffff; /* Um tom de cinza claro para os cards no fundo branco */
+    background-color: #fff;
     padding: 5px;
     text-align: center;
 }
-
 .player-card img {
     width: 100%;
     max-width: 200px;
     height: 250px;
     border-radius: 50%;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     object-fit: cover;
 }
-
 .player-name {
-    color: #000000; /* Texto preto */
-    font-weight: bold; /* Deixando a fonte em negrito */
+    color: #000;
+    font-weight: bold;
     margin-bottom: 5px;
     font-size: 1.1em;
 }
-
 .player-role {
-    color: #777; /* Cinza mais claro */
+    color: #777;
     font-size: 0.9em;
 }

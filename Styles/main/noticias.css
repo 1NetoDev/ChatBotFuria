@@ -1,38 +1,47 @@
-/* Seção de notícias no estilo do Corinthians */
-#noticias {
+/* Estilos para a seção de notícias do site. 
+
+ * #noticias: Container principal da seção.
+ * h3.noticias-section-title: Título da seção.
+ * .news-carousel-container: Container do carrossel de notícias.
+ * .news-carousel-wrapper: Envolve os itens de notícias para o efeito de carrossel.
+ * .news-item: Estilo de cada notícia individual.
+ * .news-item img: Estilo da imagem da notícia.
+ * .news-item h3: Título de cada notícia.
+ * .news-item .news-info: Informações da notícia (data, etc.).
+ * .news-item a: Link "Leia Mais".
+ * .news-item a:hover: Estilo do link ao passar o mouse.
+ * @media (min-width: 961px): Estilos para telas maiores.
+ * @media (max-width: 960px): Estilos para telas menores.
+ */
+ #noticias {
     width: 100%;
     padding: 20px 0;
     background-color: #101010;
     color: #eee;
     text-align: center;
-    overflow: hidden; /* Esconde as notícias que estão fora da área visível */
+    overflow: hidden;
 }
-
-h3.noticias-section-title{
-    color: #ffffff; /* Cor preta para o texto */
-    font-size: 3.5em; /* Tornando o texto bem grande */
-    font-weight: bold; /* Deixando a fonte em negrito */
-    text-align: center; /* Centralizando o texto */
-    margin: 0px; /* Adicionando uma margem superior para espaçamento */
-    margin-bottom: 0px; /* Adicionando uma margem inferior para espaçamento */
-    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
-    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras para um efeito estilizado */
-    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+h3.noticias-section-title {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 0;
+    padding: 5px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
-
 .news-carousel-container {
-    overflow: hidden; /* Garante que o wrapper não vaze */
+    overflow: hidden;
     width: 100%;
 }
-
 .news-carousel-wrapper {
     display: flex;
-    transition: transform 0.5s linear; /* Certifique-se de ter uma transição aqui */
+    transition: transform 0.5s linear;
     width: fit-content;
 }
-
 .news-item {
-    background-color: #000000;
+    background-color: #000;
     color: #eee;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -40,11 +49,10 @@ h3.noticias-section-title{
     width: 300px;
     flex-shrink: 0;
     text-align: left;
-    position: relative; /* Garante que o posicionamento absoluto dos filhos funcione */
-    padding-bottom: 60px; /* Aumenta o padding inferior para acomodar o botão e a info */
+    position: relative;
+    padding-bottom: 60px;
     box-sizing: border-box;
 }
-
 .news-item img {
     width: 100%;
     height: 220px;
@@ -53,24 +61,21 @@ h3.noticias-section-title{
     max-height: 100%;
     object-fit: cover;
 }
-
 .news-item h3 {
     color: #f39c12;
-    margin: 3px 3px 3px 3px;
+    margin: 3px;
     padding: 10px 5px 50px 10px;
     font-size: 1.1em;
 }
-
 .news-item .news-info {
     color: #ccc;
     font-size: 0.9em;
-    margin: 3px 3px 3px 3px;
+    margin: 3px;
     padding: 10px 5px 20px 10px;
-    position: absolute; /* Posiciona a info absolutamente */
-    bottom: 40px; /* Coloca acima do botão Leia Mais (ajuste conforme necessário) */
-    left: 10px; /* Alinha à esquerda */
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
 }
-
 .news-item a {
     display: inline-block;
     background-color: #333;
@@ -84,22 +89,20 @@ h3.noticias-section-title{
     bottom: 10px;
     left: 10px;
 }
-
 .news-item a:hover {
     background-color: #f39c12;
     color: #111;
 }
-
-/* Ajuste para garantir que 3 notícias sejam sempre visíveis */
-@media (min-width: 961px) { /* Para telas maiores que 3 * 300px + margens */
+/* Media Query para telas maiores */
+@media (min-width: 961px) {
     .news-carousel-container {
-        width: 960px; /* 3 * 300px (largura do item) + 2 * 30px (margens laterais) */
-        margin: 0 auto; /* Centralizar o container */
+        width: 960px;
+        margin: 0 auto;
     }
 }
-
+/* Media Query para telas menores */
 @media (max-width: 960px) {
     .news-carousel-.news-carousel-container {
-        width: 100%; /* Ocupar toda a largura em telas menores */
+        width: 100%;
     }
 }
