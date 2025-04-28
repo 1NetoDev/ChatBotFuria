@@ -1,0 +1,65 @@
+#CS-Go {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0px 0px;
+    background-color: #fff; /* Alterando para fundo branco */
+    color: #333; /* Alterando a cor do texto para melhor contraste com o branco */
+    text-align: center;
+}
+
+.team-section-title {
+    width: 100%;
+    color: #000000;
+    font-size: 2.0em;
+    font-weight: bold;
+    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+}
+
+h3.team-section-title {
+    color: rgb(255, 255, 255); /* Cor preta para o texto */
+    font-size: 3.5em; /* Tornando o texto bem grande */
+    font-weight: bold; /* Deixando a fonte em negrito */
+    text-align: center; /* Centralizando o texto */
+    margin: 0px; /* Adicionando uma margem superior para espaçamento */
+    margin-bottom: 10px; /* Adicionando uma margem inferior para espaçamento */
+    padding: 5px; /* Adicionando um preenchimento ao redor do texto */
+    background-color: #101010; /* Adicionando uma cor de fundo chamativa (opcional) */
+    letter-spacing: 5px; /* Aumentando o espaçamento entre as letras para um efeito estilizado */
+    text-transform: uppercase; /* Transformando o texto para maiúsculas (opcional) */
+}
+
+.Line-section,
+.coach-section,
+.reserves-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.player-card {
+    background-color: #ffffff; /* Um tom de cinza claro para os cards no fundo branco */
+    padding: 5px;
+    text-align: center;
+}
+
+.player-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    object-fit: cover;
+}
+
+.player-name {
+    color: #000000; /* Texto preto */
+    font-weight: bold; /* Deixando a fonte em negrito */
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.player-role {
+    color: #777; /* Cinza mais claro */
+    font-size: 0.9em;
+}
