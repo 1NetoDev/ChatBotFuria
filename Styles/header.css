@@ -18,87 +18,88 @@
     width: 100%;
     box-sizing: border-box;
     background-color: #fff;
-    padding: 10px 20px;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
-/* Barra de Navegação Principal na Esquerda */
+
+/* Barra de Navegação Principal */
 .header-main-nav {
     background-color: transparent;
     color: #000000;
-    padding: 0;
-    width: auto;
+    width: 100%; 
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    justify-content: center; /* Centraliza os links da nav */
 }
+
 .header-main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
+
 .header-main-nav ul li {
     margin-right: 20px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
+
 .header-main-nav ul li:first-child {
     margin-left: 0;
 }
+
 .header-main-nav ul li a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
     font-size: 1.2em;
+    display: block;
+    padding: 10px 0;
+    transition: font-size 0.3s ease, color 0.3s ease;
 }
+
 .header-main-nav ul li a:hover {
     color: #f39c12;
+    font-size: 1.5em;
 }
-/* Container da Logo (Centralizada) */
+
+/* Container da Logo (Centralizada)*/
 .header-logo-container {
+    display: flex;
     justify-content: center;
-    width: 300px;
-    margin-left: calc(5% - (100px / 1));
+    width: 100%; /* Garante que o container ocupe a largura total */
+    padding: 10px 0px 2px 0px;
 }
+
 .header-logo {
     width: 150px;
     height: auto;
-    justify-content: center;
-}
-/* Ícones de Redes Sociais (Direita) */
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-end;
-}
-.header-icons a img {
-    width: 40px;
-    height: 40px;
-    vertical-align: middle;
 }
 /* Estilos Responsivos para o Header */
 @media (max-width: 768px) {
-    .main-header {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens horizontalmente*/
-    }
 
     .header-main-nav {
-        margin-left: 0;
-        justify-content: center; /* Centraliza a navegação*/
-        width: 100%; /* Ocupa toda a largura */
-        margin-top: 10px; 
+        padding: 10px 0;
     }
 
     .header-logo-container {
-        margin: 20px 0; /* Adiciona margem vertical para separar a logo */
-        width: 100%; /* Ocupa toda a largura para centralizar */
+        padding: 20px 0;
     }
 
-    .header-icons {
-        margin-right: 0; 
-        justify-content: center; /* Centraliza os ícones em telas menores */
-        width: 100%; 
-        margin-bottom: 10px;
+    .header-main-nav ul li a {
+        font-size: 1.1em;
+    }
+
+    .header-main-nav ul li a:hover {
+        font-size: 1.3em;
     }
 }

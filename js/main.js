@@ -5,3 +5,4 @@ import './loja.js';
 import './noticias.js';
 import './prints.js';
 import './sobreNos.js';
+import './scroll.js'
