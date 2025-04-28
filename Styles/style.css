@@ -1,0 +1,5 @@
+/* Styles/style.css */
+@import './header.css';
+@import './main.css';
+@import './chatbot.css';
+@import './footer.css';

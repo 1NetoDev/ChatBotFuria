@@ -1,0 +1,68 @@
+/* Estilos para a seção de elenco (CS-Go) do site.
+
+ * #CS-Go: Container principal da seção de elenco.
+ * .team-section-title: Título secundário da seção.
+ * h3.team-section-title: Título principal da seção.
+ * .Line-section, .coach-section, .reserves-section: Layout em grid para os cards de jogadores/coach/reservas.
+ * .player-card: Estilo de cada card individual de jogador/coach/reserva.
+ * .player-card img: Estilo da imagem do jogador/coach/reserva.
+ * .player-name: Estilo do nome do jogador/coach/reserva.
+ * .player-role: Estilo da função/posição do jogador/coach/reserva.
+ */
+ #CS-Go {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+.team-section-title {
+    width: 100%;
+    color: #000;
+    font-size: 2.0em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h3.team-section-title {
+    color: #fff;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 10px;
+    padding: 5px;
+    background-color: #101010;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.Line-section,
+.coach-section,
+.reserves-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+    margin-top: 10px;
+}
+.player-card {
+    background-color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+.player-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 0;
+    object-fit: cover;
+}
+.player-name {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+.player-role {
+    color: #777;
+    font-size: 0.9em;
+}
