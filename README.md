@@ -9,12 +9,14 @@
   <div align="center">
     <img align="center" alt="" height="200px" width="200px" src="imagens/favcon.png">
   </div>
+  <br>
+  <br>
  <div align="center">
-  https://neto-furiachatbot.netlify.app
   </div>
-  
-  <img align="center" alt="" height="400px" width="900" src="imagens/furia-banner.gif">
+  <img align="center" alt="" height="400px" width="800" src="imagens/Juba-Banner.gif">
+  <p>Confira o site: https://neto-furiachatbot.netlify.app</p>
 
+      
 ## 1. Introdução
 
 Se liga, torcedor! O Juba é o nosso chatbot oficial, feito de fã para fã, com a pegada e a paixão que só a comunidade Fúria tem. Esse projeto nasceu com a ideia de ser mais do que um simples robô de conversa: queremos que ele seja seu parceiro para tirar dúvidas, te manter atualizado e até botar à prova seus conhecimentos sobre o nosso time de CS:GO.
@@ -92,6 +94,11 @@ A estrutura do projeto está organizada da seguinte forma:
 * **`Styles/chatbot.css`:** Define a aparência visual da seção do chatbot, incluindo o layout da descrição, carrossel de screenshots e o widget do Chatling.ai.
 * **`js/main.js`:** Lida com a lógica do carrossel de screenshots, a rolagem suave da navegação e, potencialmente, outras interações futuras com o chatbot (além do widget em si).
 * **`Widget Chatling.ai`:** O iframe incorporado que renderiza a interface de conversação do chatbot fornecido pela plataforma Chatling.ai. A configuração básica do chatbot (ID) é feita diretamente no HTML.
+
+* ### 4.3. Fluxograma do Chatbot
+![image](https://github.com/user-attachments/assets/66f60d94-02cc-4dab-9190-754461167fca)
+
+<p>Caso queira saber mais e entender sobre a plataforma do Chattling, veja a documentação: https://docs.chatling.ai/getting-started</p>
 
 ## 5. Contato
 
