@@ -1,6 +1,19 @@
 # Juba - Chatbot Oficial dos Fãs da Fúria
-
-![Logo Fúria](link_para_sua_logo_aqui.png)
+<div align="center">
+    <img alt="HTML5 Badge" src="https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=HTML5&logoColor=black&labelColor=%23feffbc">
+    <img alt="CSS3 Badge" src="https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=CSS3&logoColor=black&labelColor=%23feffbc">
+    <img alt="JavaScript Badge" src="https://img.shields.io/badge/Javascript-black?style=for-the-badge&logo=Javascript&logoColor=black&labelColor=%23feffbc">
+    <img alt="Git Badge" src="https://img.shields.io/badge/GIT-black?style=for-the-badge&logo=git&logoColor=black&labelColor=%23feffbc">
+    <img alt="Github Badge" src="https://img.shields.io/badge/Github-black?style=for-the-badge&logo=github&logoColor=black&labelColor=%23feffbc">
+    </div>
+  <div align="center">
+    <img align="center" alt="" height="200px" width="200px" src="imagens/favcon.png">
+  </div>
+ <div align="center">
+  https://neto-furiachatbot.netlify.app
+  </div>
+  
+  <img align="center" alt="" height="400px" width="900" src="imagens/furia-banner.gif">
 
 ## 1. Introdução
 
@@ -32,3 +45,56 @@ Ainda temos muito GG para dar! Nosso plano é evoluir o Juba com as seguintes fe
 ## 4. Arquitetura do Projeto
 
 A estrutura do projeto está organizada da seguinte forma:
+
+A estrutura do projeto está organizada da seguinte forma:
+
+* `juba-chatbot/`
+    * `README.md` - (Este arquivo)
+    * `imagens/` - (Diretório contendo as imagens do projeto)
+        * `Icones/` - (Ícones utilizados no site)
+            * `Brancos/` - (Ícones brancos)
+            * `Pretos/` - (Ícones pretos)
+        * `jogadores/` - (Fotos dos jogadores, reservas e coach)
+        * `Loja/` - (Imagens de produtos da loja)
+        * `Noticias/` - (Imagens de notícias)
+        * `Prints/` - (Screenshots do chatbot)
+        * `SobreNos/` - (Imagens da seção Sobre Nós)
+        * `favcon.png` - (Favicon do site)
+        * `logo-furia.svg` - (Logo da Fúria)
+    * `js/` - (Diretório contendo os arquivos JavaScript)
+        * `loja.js` - (Lógica específica da seção da loja)
+        * `main.js` - (Lógica principal do site e funcionalidades gerais)
+        * `noticias.js` - (Lógica específica da seção de notícias)
+        * `prints.js` - (Lógica específica do carrossel de prints do chatbot)
+        * `scroll.js` - (Lógica relacionada à rolagem suave da navegação)
+        * `sobreNos.js` - (Lógica específica da seção Sobre Nós)
+    * `Styles/` - (Diretório contendo os arquivos de estilo CSS)
+        * `main.css` - (Estilos gerais do site)
+        * `chatbot.css` - (Estilos específicos da seção do chatbot)
+        * `elenco.css` - (Estilos específicos da seção do elenco)
+        * `loja.css` - (Estilos específicos da seção da loja)
+        * `noticias.css` - (Estilos específicos da seção de notícias)
+        * `sobreNos.css` - (Estilos específicos da seção Sobre Nós)
+        * `footer.css` - (Estilos do rodapé)
+        * `header.css` - (Estilos do cabeçalho)
+    * `index.html` - (Arquivo HTML principal da Landing Page)
+
+### 4.1. Tecnologias Utilizadas
+
+* `**HTML:**` Estrutura da página web.
+* `**CSS:**` Estilização visual da página (incluindo responsividade).
+* `**JavaScript:**` Lógica interativa do chatbot e funcionalidades dinâmicas.
+* `**Chatling.ai (Widget):`** Plataforma utilizada para incorporar o widget de chatbot na página.
+
+### 4.2. Componentes Principais do Chatbot (Lado Cliente - Front-end)
+
+* **`index.html`:** Contém a estrutura da seção do chatbot (`.welcome-area`, `.project-section`, `.chatbot-screenshots`, `.chatbot-widget`).
+* **`Styles/chatbot.css`:** Define a aparência visual da seção do chatbot, incluindo o layout da descrição, carrossel de screenshots e o widget do Chatling.ai.
+* **`js/main.js`:** Lida com a lógica do carrossel de screenshots, a rolagem suave da navegação e, potencialmente, outras interações futuras com o chatbot (além do widget em si).
+* **`Widget Chatling.ai`:** O iframe incorporado que renderiza a interface de conversação do chatbot fornecido pela plataforma Chatling.ai. A configuração básica do chatbot (ID) é feita diretamente no HTML.
+
+## 5. Contato
+
+Dúvidas, sugestões ou feedback sobre o Juba? Manda um salve para `joaobatistarn.05@gmail.com`
+
+**\#GoFuria \#JubaBot \#FeitoDeFãParaFã**
