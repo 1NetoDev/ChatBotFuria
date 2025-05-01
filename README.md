@@ -141,8 +141,9 @@ A estrutura do projeto está organizada da seguinte forma:
 
 * ### 4.3. Fluxograma do Chatbot
 ![image](https://github.com/user-attachments/assets/66f60d94-02cc-4dab-9190-754461167fca)
-
 <p>Caso queira saber mais e entender sobre a plataforma do Chattling, veja a documentação: https://docs.chatling.ai/getting-started</p>
+
+* De maneira resumida, o fluxo obtem o Nome e Email do usuário, o nome para posteriormente conversarem e o Email para registro dentro da plataforma, logo após realiza uma breve abordagem de suas funcionalidades próprias, em sequência ele permite que o usuário faça interações diretamente, ele guarda a informação da interação em um registro e o chat faz a resposta, essa respsota tambem é guardada no registro, esse resguardo da intereção vem com o objetivo de posteriormente o chat ter um Histórico de conversas limitado(25 Mensangens), para conseguir se lembrar de informações do passado facilitando em algumas respostas ou dinamicas internas, após isso ele retorna ao usuário poder interagir novamente.
 
 ## 5. Contato
 
@@ -156,4 +157,4 @@ Este projeto está atualmente em fase de desenvolvimento para o Challenge #1. Fu
 
 ## 7. Direitos Autorais
 
-Este projeto é de autoria própria de `João Batista Ribeiro Neto`. Todos os direitos reservados.
+Este projeto é de autoria própria de `João Batista Ribeiro Neto` como desafio técnico para a vaga de `Assistente de Engenheiro de Software` na empresa `Furia`. Todos os direitos reservados. Não autorizo o uso, cópia, ou aplicação substancialmente similar a este. Assegurado pela Lei  Nº 9.610 (lei de Direitos Autorais - LDA). O Código-fonte de programas de computador é expressamente protegido por essa lei (Art.7, XII e art 96.) Também se enquadrando como obra literária (Art.7, I)
