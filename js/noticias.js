@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalItems = newsItems.length;
     let currentIndex = 0;
     let isTransitioning = false;
-    const transitionDuration = 500; // Duração da transição em ms (ajuste conforme o seu CSS)
+    const transitionDuration = 500;
 
     // Clone os primeiros itens e adicione ao final para o loop infinito
     for (let i = 0; i < totalItems; i++) {
